@@ -7,6 +7,7 @@ export default function WorksId({ works }) {
         <main className={styles.main}>
             <h1 className={styles.title}>{works.title}</h1>
             <p className={styles.publishedAt}>{works.publishedAt}</p>
+            <p className="category">{works.category && `${works.category.name}`}</p>
             <div
                 dangerouslySetInnerHTML={{
                     __html: `${works.body}`,
