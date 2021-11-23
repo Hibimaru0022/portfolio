@@ -1,0 +1,37 @@
+.visible_nrw {
+    display: block;
+
+    @include MQ_WIDE {
+        display: none;
+    }
+
+    &.-inline {
+        display: inline;
+
+        @include MQ_WIDE {
+            display: none;
+        }
+    }
+}
+
+.visible_wide {
+    @include MQ_NARROW {
+        display: none;
+    }
+}
+
+.visible_mobile {
+    display: none;
+
+    .app-mobile & {
+        display: block;
+    }
+}
+
+.visible_pc {
+    display: none;
+
+    .app-pc & {
+        display: block;
+    }
+}

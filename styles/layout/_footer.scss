@@ -1,0 +1,7 @@
+.l-footer {
+    width: 100%;
+
+    @include MQ_NARROW {
+        display: none;
+    }
+}

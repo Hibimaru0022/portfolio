@@ -1,40 +1,23 @@
-.main {
-    width: 960px;
-    margin: 0 auto;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Rubik:wght@300;400;500;600;700&display=swap');
 
-.title {
-    margin-bottom: 20px;
-}
+//base
+@import './foundation/base/base';
 
-.publishedAt {
-    margin-bottom: 40px;
-}
+// mixin
+@import './foundation/mixin/vw';
+@import './foundation/mixin/font';
+@import './foundation/mixin/mediaquery';
+@import './foundation/mixin/position';
 
-.post {
-    & > h1 {
-        font-size: 30px;
-        font-weight: bold;
-        margin: 40px 0 20px;
-        background-color: #eee;
-        padding: 10px 20px;
-        border-radius: 5px;
-    }
+// layout
+@import './layout/inner';
+@import './layout/header';
+@import './layout/footer';
 
-    & > h2 {
-        font-size: 24px;
-        font-weight: bold;
-        margin: 40px 0 16px;
-        border-bottom: 1px solid #ddd;
-    }
+// page layer
+@import './page/mv';
 
-    & > p {
-        line-height: 1.8;
-        letter-spacing: 0.2px;
-    }
+// components
+@import './object/component/visible';
 
-    & > ol {
-        list-style-type: decimal;
-        list-style-position: inside;
-    }
-}
+@import './object/component/utility/swiper';
