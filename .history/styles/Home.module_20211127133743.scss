@@ -4,7 +4,7 @@
 @import './foundation/base/base';
 
 // mixin
-@import './foundation/mixin/vw';
+// @import './foundation/mixin/vw';
 @import './foundation/mixin/font';
 @import './foundation/mixin/mediaquery';
 @import './foundation/mixin/position';
@@ -20,4 +20,4 @@
 // components
 @import './object/component/visible';
 
-@import './object/utility/swiper';
+@import './object/component/utility/swiper';

@@ -1,5 +1,6 @@
 // pages/index.js
 import Link from 'next/link';
+import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import React, { useState } from 'react';
 import { client } from '../libs/client';
@@ -33,14 +34,25 @@ export default function Home({ works }) {
     );
 }
 
+export const getStaticPath = async () => {
+    const key = {
+        headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY },
+    };
+    const data = await fetch('https://hibimaru.microcms.io/api/v1/works', key)
+        .then((res) => res.json())
+        .catch(() => null);
+    const dataid = data ? data.contents : null,
+        paths = dataid ? dataid.map((content) => `/works/${works.id}`) : null;
+    return { paths, fallback: false };
+};
+
 // データをテンプレートに受け渡す部分の処理を記述します
-export const getStaticProps = async () => {
-    const data = await client.get({ endpoint: 'works', queries: { limit: 4 } });
+export const getStaticProps = async (context) => {
+    const data = await client.get({ endpoint: 'works' });
 
     return {
         props: {
             works: data.contents,
-            limit: 4,
         },
     };
 };

@@ -35,12 +35,13 @@ export default function Home({ works }) {
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
-    const data = await client.get({ endpoint: 'works', queries: { limit: 4 } });
+    const data = await client.get({ endpoint: 'works' });
+    const limit = 4;
 
     return {
         props: {
             works: data.contents,
-            limit: 4,
+            limit: limit,
         },
     };
 };

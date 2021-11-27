@@ -33,14 +33,19 @@ export default function Home({ works }) {
     );
 }
 
+export const getStaticPath = async () => {
+    const key = {
+        headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY },
+    };
+};
+
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
-    const data = await client.get({ endpoint: 'works', queries: { limit: 4 } });
+    const data = await client.get({ endpoint: 'works' });
 
     return {
         props: {
             works: data.contents,
-            limit: 4,
         },
     };
 };

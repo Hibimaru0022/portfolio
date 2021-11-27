@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use 'sass:marh';
 //pxをvwに変換するfunction
 @function vw($size, $viewport: 375) {
     $rate: math.div(100, 375);

@@ -37,10 +37,6 @@
     }
 
     &__anim {
-        width: 100%;
-
-        @include MQ_WIDE {
-            width: 626px;
-        }
+        width: 50%;
     }
 }
