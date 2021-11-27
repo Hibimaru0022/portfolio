@@ -15,8 +15,8 @@
     justify-content: space-between;
 }
 
-.logo img {
-    width: vw(110);
+.logo {
+    width: vw(100);
 
     @include MQ_WIDE {
         width: 192px;
@@ -60,5 +60,5 @@
 }
 
 .menu__nrw img {
-    width: 36px;
+    width: 42px;
 }

@@ -59,13 +59,12 @@ export default function Home({ works, minimals }) {
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
-    const worksData = await client.get({ endpoint: 'works', queries: { limit: 4 } });
-    const minimalsData = await client.get({ endpoint: 'minimals', queries: { limit: 5 } });
+    const data = await client.get({ endpoint: 'works', queries: { limit: 4 } });
 
     return {
         props: {
-            works: worksData.contents,
-            minimals: minimalsData.contents,
+            works: data.contents,
+            minimals: data.contents,
         },
     };
 };

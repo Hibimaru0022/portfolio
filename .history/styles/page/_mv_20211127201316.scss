@@ -84,10 +84,10 @@
 }
 
 .scrollTxt {
-    margin: vw(4) auto 0;
+    margin: 0 auto;
     color: $primary-color;
     text-align: center;
-    font-size: vw(11);
+    font-size: vw(10);
     width: 100%;
 
     @include MQ_WIDE {

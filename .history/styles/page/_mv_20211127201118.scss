@@ -59,35 +59,37 @@
 .scrollDown {
     margin: vw(60) auto 0;
     border: 2px solid $primary-color;
-    width: 14px;
-    height: 22px;
+    width: vw(12);
+    height: vw(20);
     border-radius: vw(10);
     position: relative;
 
     @include MQ_WIDE {
         border-radius: 10px;
+        width: 13px;
+        height: 20px;
         margin-top: 40px;
     }
 
     &:before {
-        animation: circleAnim 2s ease infinite;
+        animation: circleAnim 1s ease;
         content: '';
         display: block;
         margin: 2px auto 0;
         // @include absPosition(2px, 50%);
         // transform: translateX(-50%);
         background: $primary-color;
-        width: 4px;
-        height: 4px;
+        width: 3px;
+        height: 3px;
         border-radius: 50%;
     }
 }
 
 .scrollTxt {
-    margin: vw(4) auto 0;
+    margin: 0 auto;
     color: $primary-color;
     text-align: center;
-    font-size: vw(11);
+    font-size: vw(10);
     width: 100%;
 
     @include MQ_WIDE {
@@ -98,11 +100,11 @@
 
 @keyframes circleAnim {
     0% {
-        transform: translateY(-1px);
+        transform: translateY(0);
         opacity: 1;
     }
     100% {
-        transform: translateY(6px);
+        transform: translateY(10px);
         opacity: 0;
     }
 }

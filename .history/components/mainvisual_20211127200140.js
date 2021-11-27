@@ -20,8 +20,8 @@ const Mainvisual = () => {
                         <Lottie options={defaultOptions} />
                     </div>
                 </div>
-                <div className={styles.scrollDown}></div>
                 <p className={styles.scrollTxt}>Scroll</p>
+                <div className={styles.scrollDown}></div>
             </div>
         </div>
     );

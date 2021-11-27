@@ -12,7 +12,7 @@
 .inner {
     width: 100%;
     margin: 0 auto;
-    padding: 0 5.3%;
+    padding: 0;
 
     @include MQ_WIDE {
         max-width: 1200px;

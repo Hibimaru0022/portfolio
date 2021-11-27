@@ -33,7 +33,7 @@ export default function Home({ works, minimals }) {
                         ))}
                     </ul>
                 </div>
-                <div className={styles.minimals} id="minimals">
+                {/* <div className={styles.minimals} id="minimals">
                     <MinimalsTtl />
                     <ul className={`${styles.minimals__list} ${styles.slider}`}>
                         {minimals.map((minimals) => (
@@ -51,7 +51,7 @@ export default function Home({ works, minimals }) {
                             </li>
                         ))}
                     </ul>
-                </div>
+                </div> */}
             </div>
         </div>
     );

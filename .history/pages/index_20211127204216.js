@@ -32,25 +32,25 @@ export default function Home({ works, minimals }) {
                             </li>
                         ))}
                     </ul>
-                </div>
-                <div className={styles.minimals} id="minimals">
-                    <MinimalsTtl />
-                    <ul className={`${styles.minimals__list} ${styles.slider}`}>
-                        {minimals.map((minimals) => (
-                            <li key={minimals.id} className={styles.minimals__col}>
-                                <Link href={`/minimals${minimals.id}`}>
-                                    <a>
-                                        <figure className={styles.minimals__col__thumbnail}>
-                                            <img src={minimals.img.url} alt={minimals.title} />
-                                        </figure>
-                                        <div className={styles.minimals__col__info}>
-                                            <h4 className={styles.minimals__col__ttl}>{minimals.title}</h4>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
+                    <div className={styles.minimals} id="minimals">
+                        <MinimalsTtl />
+                        <ul className={`${styles.minimals__list} ${styles.slider}`}>
+                            {minimals.map((minimals) => (
+                                <li key={minimals.id} className={styles.minimals__col}>
+                                    <Link href={`/minimals${minimals.id}`}>
+                                        <a>
+                                            <figure className={styles.minimals__col__thumbnail}>
+                                                <img src={minimals.img.url} alt={minimals.title} />
+                                            </figure>
+                                            <div className={styles.minimals__col__info}>
+                                                <h4 className={styles.minimals__col__ttl}>{minimals.title}</h4>
+                                            </div>
+                                        </a>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,13 +59,13 @@ export default function Home({ works, minimals }) {
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
-    const worksData = await client.get({ endpoint: 'works', queries: { limit: 4 } });
-    const minimalsData = await client.get({ endpoint: 'minimals', queries: { limit: 5 } });
+    const data = await client.get({ endpoint: 'works', queries: { limit: 4 } });
 
     return {
         props: {
-            works: worksData.contents,
-            minimals: minimalsData.contents,
+            works: data.contents,
+            limit: 4,
+            minimals: data.cpt,
         },
     };
 };
