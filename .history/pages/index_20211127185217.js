@@ -1,7 +1,7 @@
 // pages/index.js
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
-import React from 'react';
+import Reactfrom 'react';
 import { client } from '../libs/client';
 import Header from '../components/header';
 import MainVisual from '../components/mainvisual';

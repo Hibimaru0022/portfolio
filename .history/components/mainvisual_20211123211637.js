@@ -30,7 +30,7 @@ const defaultOptions = {
     autoplay: true,
     animationData: mvAnim,
     rendererSettings: {
-        preserveAspectRatio: 'xMidYmid',
+        preserveAspectRatio: 'xMidYmid slice',
     },
 };
 

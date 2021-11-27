@@ -29,9 +29,6 @@ const defaultOptions = {
     loop: true,
     autoplay: true,
     animationData: mvAnim,
-    rendererSettings: {
-        preserveAspectRatio: 'xMidYmid',
-    },
 };
 
 export default Mainvisual;
