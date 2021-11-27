@@ -1,0 +1,63 @@
+.about {
+    background: #eff4fa;
+    margin: vw(110) auto 0;
+
+    @include MQ_WIDE {
+        margin-top: 170px;
+    }
+
+    &__inner {
+        margin: 0 auto;
+        padding: vw(20) 0;
+
+        @include MQ_WIDE {
+            width: 1020px;
+            padding: 38px 0;
+        }
+
+        &.__about__inner {
+            padding: 82px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include MQ_WIDE {
+            gap: 0 60px;
+            flex-direction: row;
+        }
+    }
+
+    &__ph {
+        @include MQ_NARROW {
+            order: 2;
+        }
+        img {
+            width: vw(186);
+
+            @include MQ_WIDE {
+                width: 286px;
+            }
+        }
+    }
+
+    &__read {
+        order: 3;
+
+        @include MQ_WIDE {
+            width: 560px;
+        }
+    }
+
+    &__txt {
+        color: $primary-color;
+        margin: vw(54) 0 0;
+
+        @include MQ_WIDE {
+            margin-top: 18px;
+        }
+    }
+}

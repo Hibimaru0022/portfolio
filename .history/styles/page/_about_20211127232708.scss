@@ -1,0 +1,20 @@
+.about {
+    background: #eff4fa;
+    margin: vw(110) auto 0;
+
+    @include MQ_WIDE {
+        margin-top: 170px;
+    }
+
+    &__inner {
+        @include MQ_WIDE {
+            width: 1;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

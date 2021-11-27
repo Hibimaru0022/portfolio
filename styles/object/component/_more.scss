@@ -1,0 +1,46 @@
+.more {
+    border: 2px solid $primary-color;
+    border-radius: vw(12);
+    color: $primary-color;
+    font-size: vw(16);
+    display: block;
+    margin: vw(40) auto 0;
+    text-align: center;
+    width: vw(200);
+    height: vw(40);
+    transition: 0.3s;
+
+    @include MQ_WIDE {
+        font-size: 16px;
+        width: 130px;
+        margin: 60px auto 0;
+        height: 40px;
+        border-radius: 12px;
+
+        &:hover {
+            background: $primary-color;
+            color: #fff;
+        }
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        position: relative;
+        font-weight: 500;
+
+        &::after {
+            background: url(../../../public/img/ico_arrow_right.svg) no-repeat center;
+            display: inline-block;
+            content: '';
+            width: vw(16);
+            height: vw(16);
+            @include absPosition(1px, null, null, 0);
+
+            @include MQ_WIDE {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
