@@ -1,24 +1,16 @@
 .mv {
     width: 100%;
-    height: vw(666);
 
     &__inner {
+        height: 80vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex-direction: column;
-
-        @include MQ_WIDE {
-            height: 80vh;
-            flex-direction: row;
-        }
     }
 
     &__catch {
-        order: 2;
         @include MQ_WIDE {
             width: 50%;
-            order: 1;
         }
     }
 
@@ -45,11 +37,9 @@
     }
 
     &__anim {
-        order: 1;
         width: 100%;
 
         @include MQ_WIDE {
-            order: 2;
             width: 626px;
         }
     }

@@ -3,14 +3,11 @@
     height: vw(666);
 
     &__inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-
         @include MQ_WIDE {
             height: 80vh;
-            flex-direction: row;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 

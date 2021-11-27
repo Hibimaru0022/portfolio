@@ -1,0 +1,12 @@
+.section__ttl {
+    text-align: center;
+    font-size: vw(26);
+    font-weight: bold;
+    color: $primary-color;
+    margin-top: VW(120);
+
+    @include MQ_WIDE {
+        font-size: 38px;
+        margin-top: 80px;
+    }
+}

@@ -32,7 +32,6 @@ export default function Home({ works }) {
                         ))}
                     </ul>
                 </section>
-                <section id="minimals"></section>
             </div>
         </div>
     );

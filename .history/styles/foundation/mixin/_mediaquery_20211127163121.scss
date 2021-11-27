@@ -17,7 +17,7 @@
 }
 
 @mixin MQ_MID {
-    @media (min-width: 751px) and (max-width: 1100px) {
+    @media (min-width: 751px) and (max-width: 1000px) {
         @content;
     }
 }

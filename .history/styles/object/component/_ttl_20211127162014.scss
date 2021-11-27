@@ -1,0 +1,21 @@
+.section__ttl {
+    text-align: center;
+    font-size: vw(26);
+    font-weight: 500;
+    color: $primary-color;
+    margin-top: VW(120);
+
+    @include MQ_WIDE {
+        font-size: 38px;
+        margin-top: 80px;
+    }
+}
+
+.ttl__border {
+    width: vw(60);
+    height: vw(4);
+
+    @include MQ_WIDE {
+        width: 90px;
+    }
+}

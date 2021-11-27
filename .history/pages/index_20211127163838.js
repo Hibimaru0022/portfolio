@@ -13,9 +13,9 @@ export default function Home({ works }) {
             <Header />
             <MainVisual />
             <div className={styles.inner}>
-                <section className={styles.works} id="section">
+                <section className={styles.works}>
                     <WorksTtl />
-                    <ul className={`${styles.works__list} ${styles.slider}`}>
+                    <ul className={`${styles.works} ${styles.slider}`}>
                         {works.map((works) => (
                             <li key={works.id} className={styles.works__col}>
                                 <Link href={`/works/${works.id}`}>
@@ -32,7 +32,6 @@ export default function Home({ works }) {
                         ))}
                     </ul>
                 </section>
-                <section id="minimals"></section>
             </div>
         </div>
     );
