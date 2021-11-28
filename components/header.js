@@ -14,9 +14,9 @@ const Header = () => {
         <header className={styles.header} id="header">
             <div className={styles.inner}>
                 <div className={styles.navigation}>
-                    <div className={styles.logo}>
-                        <Image src="/img/logo.svg" alt="Hibimaru" width={190} height={36} />
-                    </div>
+                    <h1 className={open ? styles.close : styles.logo}>
+                        <Image src="/img/logo.svg" alt="Hibimaru" width={120} height={36} />
+                    </h1>
                     <nav className={styles.nav}>
                         <ul className={`${styles.navmenu} ${styles.visible_wide}`}>
                             <li>
@@ -36,24 +36,34 @@ const Header = () => {
                             <Link href="./">Contact</Link>
                         </button>
                     </nav>
-                    <nav className={`${styles.menu__nrw} ${styles.visible_nrw}`} onClick={() => menu()}>
-                        <a href="#">
-                            <Image src="/img/ico_hamburger.svg" alt="menu" width={30} height={30} />
-                        </a>
-                        <ul className={open ? styles.menu__nrw : undefined}>
-                            <li>
-                                <Link href="./">Home</Link>
-                            </li>
-                            <li>
-                                <Link href="./">Works</Link>
-                            </li>
-                            <li>
-                                <Link href="./">Illustration</Link>
-                            </li>
-                            <li>
-                                <Link href="./">About</Link>
-                            </li>
-                        </ul>
+                    <nav className={`${styles.menu__nrw} ${styles.visible_nrw}`}>
+                        {/* <Image className={open ? undefined : styles.menu__logo} src="/img/logo.svg" alt="Hibimaru" width={120} height={30} /> */}
+                        <div className={styles.menu__icon} onClick={() => menu()}>
+                            <span className={open ? styles.open_bar : styles.menu__btn}></span>
+                            <span className={open ? styles.open_bar : styles.menu__btn}></span>
+                        </div>
+                        <div className={open ? styles.menu__box : styles.close}>
+                            <h1 className={styles.menu__logo}>
+                                <Image src="/img/ph_menu_logo.svg" alt="Hibimaru" width={120} height={36} />
+                            </h1>
+                            <ul className={styles.menu__list}>
+                                <li className={styles.menu__list__col}>
+                                    <Link href="./">Home</Link>
+                                </li>
+                                <li className={styles.menu__list__col}>
+                                    <Link href="./">Works</Link>
+                                </li>
+                                <li className={styles.menu__list__col}>
+                                    <Link href="./">Illustration</Link>
+                                </li>
+                                <li className={styles.menu__list__col}>
+                                    <Link href="./">About</Link>
+                                </li>
+                                <li className={styles.menu__list__col}>
+                                    <Link href="./">Contact</Link>
+                                </li>
+                            </ul>
+                        </div>
                     </nav>
                 </div>
             </div>

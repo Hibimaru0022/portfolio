@@ -17,9 +17,12 @@
 
 .logo {
     width: vw(110);
+    @include fxdPosition(vw(25), vw(20));
+    z-index: 100;
 
     @include MQ_WIDE {
         width: 192px;
+        position: inherit;
     }
 }
 
@@ -28,8 +31,9 @@
     align-items: center;
 
     .contact__btn {
-        border: 1px solid $primary-color;
+        border: 2px solid $primary-color;
         border-radius: 30px;
+        color: $primary-color;
         transition: 0.3s;
 
         @include MQ_WIDE {
@@ -60,6 +64,140 @@
 }
 
 .menu__nrw {
-    width: 36px;
+    background: $primary-color;
+    width: 100%;
+    height: 100%;
+}
+
+.menu__icon {
+    // display: none;
+    cursor: pointer;
+    @include fxdPosition(vw(35), null, null, vw(25));
+    z-index: 999;
+    // @include absPosition(vw(25), null, null, vw(22));
+
+    .menu__btn {
+        background: $primary-color;
+        width: 22px;
+        height: 3px;
+        border-radius: 10px;
+        display: block;
+        margin-bottom: 7px;
+    }
+}
+
+.menu__logo {
+    width: vw(110);
+    @include absPosition(vw(25), vw(20));
+}
+.open_bar {
+    background: #fff;
+    width: 22px;
+    height: 3px;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 7px;
+
+    &:first-child {
+        transform: translateY(4px) rotate(45deg);
+    }
+    &:nth-child(2) {
+        transform: translateY(-6px) rotate(-45deg);
+        margin-bottom: 0;
+    }
+}
+.close {
     display: none;
+}
+
+.menu__box {
+    @include fxdPosition(0, 0);
+    background: rgba($color: #172b4d, $alpha: 0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    height: 80%;
+    margin: vw(100) auto 0;
+    padding: 5.3%;
+    opacity: 1;
+    transform: 1s;
+
+    &__col {
+        color: #fff;
+        font-size: vw(16);
+        text-align: left;
+
+        a {
+            padding-left: 10px;
+        }
+
+        // &:nth-of-type(n + 2) {
+        //     padding-top: vw(60);
+        // }
+
+        // &:nth-child(1) {
+        //     &::before {
+        //         background: url(../../public/img/ico_home.svg) no-repeat center;
+        //         background-size: cover;
+        //         vertical-align: middle;
+        //         content: '';
+        //         display: inline-block;
+        //         width: 20px;
+        //         height: 20px;
+        //     }
+        // }
+        // &:nth-child(2) {
+        //     &::before {
+        //         background: url(../../public/img/ico_home.svg) no-repeat center;
+        //         background-size: cover;
+        //         vertical-align: middle;
+        //         content: '';
+        //         display: inline-block;
+        //         width: 20px;
+        //         height: 20px;
+        //     }
+        // }
+        // &:nth-child(3) {
+        //     &::before {
+        //         background: url(../../public/img/ico_home.svg) no-repeat center;
+        //         background-size: cover;
+        //         vertical-align: middle;
+        //         content: '';
+        //         display: inline-block;
+        //         width: 20px;
+        //         height: 20px;
+        //     }
+        // }
+        // &:nth-child(4) {
+        //     &::before {
+        //         background: url(../../public/img/ico_home.svg) no-repeat center;
+        //         background-size: cover;
+        //         vertical-align: middle;
+        //         content: '';
+        //         display: inline-block;
+        //         width: 20px;
+        //         height: 20px;
+        //     }
+        // }
+        // &:nth-child(5) {
+        //     &::before {
+        //         background: url(../../public/img/ico_home.svg) no-repeat center;
+        //         background-size: cover;
+        //         vertical-align: middle;
+        //         content: '';
+        //         display: inline-block;
+        //         width: 20px;
+        //         height: 20px;
+        //     }
+        // }
+    }
 }
