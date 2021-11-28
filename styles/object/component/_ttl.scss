@@ -9,6 +9,8 @@
         font-size: 38px;
     }
     &._about {
+        padding-top: vw(38);
+
         @include MQ_WIDE {
             text-align: left;
         }

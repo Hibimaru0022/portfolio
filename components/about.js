@@ -21,7 +21,7 @@ const About = () => {
                             Front-end development, flat illustration and motion design regardless of individuals or companies.Front-end development, flat illustration and motion design regardless of
                             individuals or companies.
                         </p>
-                        <ul className={styles.about__skill}>
+                        <ul className={`${styles.about__skill} ${styles.visible_wide}`}>
                             <li>
                                 <Image src="/img/ico_development.svg" width={82} height={82} alt="Development" />
                             </li>
@@ -37,6 +37,14 @@ const About = () => {
                     Front-end development, flat illustration and motion design regardless of individuals or companies.Front-end development, flat illustration and motion design regardless of
                     individuals or companies.
                 </p>
+                <ul className={`${styles.about__skill} ${styles.visible_nrw_skill}`}>
+                    <li>
+                        <Image src="/img/ico_development.svg" width={82} height={82} alt="Development" />
+                    </li>
+                    <li>
+                        <Image src="/img/ico_illustration.svg" width={82} height={82} alt="Illustration" />
+                    </li>
+                </ul>
             </div>
         </section>
     );
