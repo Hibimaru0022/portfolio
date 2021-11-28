@@ -1,13 +1,12 @@
 // pages/index.js
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
-import React, { state, useState } from 'react';
+import React, { state, useState, useEffect } from 'react';
 import { client } from '../libs/client';
 import Header from '../components/header';
 import MainVisual from '../components/mainvisual';
-import WorksTtl from '../components/works_ttl';
-import MinimalsTtl from '../components/minimals_ttl';
 import About from '../components/about';
+import Title from '../components/title';
 
 export default function Home({ works, minimals }) {
     return (
@@ -16,7 +15,7 @@ export default function Home({ works, minimals }) {
             <MainVisual />
             <div className={styles.inner}>
                 <section className={styles.works} id="works">
-                    <WorksTtl />
+                    <Title title={'Works'} />
                     <ul className={`${styles.works__list} ${styles.slider}`}>
                         {works.map((works) => (
                             <li key={works.id} className={styles.works__col}>
@@ -41,7 +40,7 @@ export default function Home({ works, minimals }) {
                     </button>
                 </section>
                 <section className={styles.minimals} id="minimals">
-                    <MinimalsTtl />
+                    <Title title={'Minimals'} />
                     <ul className={`${styles.minimals__list} ${styles.slider}`}>
                         {minimals.map((minimals) => (
                             <li key={minimals.id} className={styles.minimals__col}>

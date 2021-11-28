@@ -14,7 +14,7 @@ const About = () => {
                         <Image src="/img/ph_my-icon.svg" width={280} height={200} alt="Hibimaru" />
                     </div>
                     <div className={styles.about__read}>
-                        <AboutTtl />
+                        <AboutTtl title={'About Me'} />
                         <p className={`${styles.about__txt} ${styles.visible_wide}`}>
                             <strong>Hi! My name is Hibiki Shono.</strong>
                             <br />

@@ -59,6 +59,10 @@
     }
 }
 
-.menu__nrw img {
+.menu__nrw {
     width: 36px;
+
+    img {
+        opacity: 0;
+    }
 }

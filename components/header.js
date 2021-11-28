@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Link from 'next/dist/client/link';
 import styles from '../styles/Home.module.scss';
 import Head from 'next/head';
 import Image from 'next/image';
+
 const Header = () => {
     return (
         <header className={styles.header} id="header">
@@ -17,17 +18,17 @@ const Header = () => {
                                 <Link href="./">Home</Link>
                             </li>
                             <li>
-                                <Link href="./Works">Works</Link>
+                                <Link href="./">Works</Link>
                             </li>
                             <li>
-                                <Link href="./Illustration">Illustration</Link>
+                                <Link href="./">Illustration</Link>
                             </li>
                             <li>
-                                <Link href="./About">About</Link>
+                                <Link href="./">About</Link>
                             </li>
                         </ul>
                         <button className={`${styles.contact__btn} ${styles.visible_wide}`}>
-                            <Link href="./Contact">Contact</Link>
+                            <Link href="./">Contact</Link>
                         </button>
                     </nav>
                     <nav className={`${styles.menu__nrw} ${styles.visible_nrw}`}>

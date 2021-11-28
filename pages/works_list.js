@@ -3,14 +3,14 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
 import React, { state, useState } from 'react';
 import { client } from '../libs/client';
-import WorksTtl from '../components/works_ttl';
+import Title from '../components/title';
 
 export default function WorksList({ works }) {
     return (
         <div className={styles.wrap}>
             <div className={styles.inner}>
                 <div className={styles.works} id="works">
-                    <WorksTtl />
+                    <Title title={'Works'} />
                     <ul className={`${styles.works__list} ${styles.slider}`}>
                         {works.map((works) => (
                             <li key={works.id} className={styles.works__col}>

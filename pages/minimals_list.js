@@ -3,14 +3,14 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
 import React, { state, useState } from 'react';
 import { client } from '../libs/client';
-import MinimalsTtl from '../components/minimals_ttl';
+import Title from '../components/title';
 
 export default function MinimalsList({ minimals }) {
     return (
         <div className={styles.wrap}>
             <div className={styles.inner}>
                 <div className={styles.minimals} id="minimals">
-                    <MinimalsTtl />
+                    <Title title={'Minimals'} />
                     <ul className={`${styles.minimals__list} ${styles.slider}`}>
                         {minimals.map((minimals) => (
                             <li key={minimals.id} className={styles.minimals__col}>
