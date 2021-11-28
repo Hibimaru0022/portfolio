@@ -15,8 +15,8 @@
     justify-content: space-between;
 }
 
-.logo {
-    width: vw(110);
+.logo img {
+    width: vw(90);
 
     @include MQ_WIDE {
         width: 192px;

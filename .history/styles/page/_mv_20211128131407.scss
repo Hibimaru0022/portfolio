@@ -1,7 +1,6 @@
 .mv {
     width: 100%;
     height: 100%;
-    position: relative;
 
     &__inner {
         display: flex;
@@ -58,9 +57,7 @@
 
 // scroll down
 .scrollDown {
-    // margin: vw(60) auto 0;
-    @include absPosition(null, 50%, 0);
-    transform: translateX(-50%);
+    margin: vw(60) auto 0;
     border: 2px solid $primary-color;
     width: 14px;
     height: 22px;
@@ -77,6 +74,8 @@
         content: '';
         display: block;
         margin: 2px auto 0;
+        // @include absPosition(2px, 50%);
+        // transform: translateX(-50%);
         background: $primary-color;
         width: 4px;
         height: 4px;
@@ -85,8 +84,7 @@
 }
 
 .scrollTxt {
-    // margin: vw(4) auto 0;
-
+    margin: vw(4) auto 0;
     color: $primary-color;
     text-align: center;
     font-size: vw(11);
@@ -94,7 +92,7 @@
 
     @include MQ_WIDE {
         margin-top: 4px;
-        font-size: 11px;
+        font-size: 10px;
     }
 }
 
