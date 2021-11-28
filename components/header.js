@@ -5,6 +5,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 const Header = () => {
+    const [open, setIsOpen] = useState(false);
+    const menu = () => {
+        setIsOpen(!open);
+    };
+
     return (
         <header className={styles.header} id="header">
             <div className={styles.inner}>
@@ -31,10 +36,24 @@ const Header = () => {
                             <Link href="./">Contact</Link>
                         </button>
                     </nav>
-                    <nav className={`${styles.menu__nrw} ${styles.visible_nrw}`}>
+                    <nav className={`${styles.menu__nrw} ${styles.visible_nrw}`} onClick={() => menu()}>
                         <a href="#">
                             <Image src="/img/ico_hamburger.svg" alt="menu" width={30} height={30} />
                         </a>
+                        <ul className={open ? styles.menu__nrw : undefined}>
+                            <li>
+                                <Link href="./">Home</Link>
+                            </li>
+                            <li>
+                                <Link href="./">Works</Link>
+                            </li>
+                            <li>
+                                <Link href="./">Illustration</Link>
+                            </li>
+                            <li>
+                                <Link href="./">About</Link>
+                            </li>
+                        </ul>
                     </nav>
                 </div>
             </div>

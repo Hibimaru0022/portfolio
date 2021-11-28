@@ -17,6 +17,15 @@ const Mainvisual = () => {
             1
         );
         tl.from(
+            '.js-ph',
+            {
+                y: 50,
+                opacity: 0,
+                ease: 'Power1.ease',
+            },
+            1.1
+        );
+        tl.from(
             '.js-subcopy',
             {
                 y: 50,
@@ -24,6 +33,14 @@ const Mainvisual = () => {
                 ease: 'Power1.ease',
             },
             1.2
+        );
+        tl.from(
+            '.js-mouse',
+            {
+                opacity: 0,
+                ease: 'Power1.ease',
+            },
+            1.4
         );
     });
     return (
@@ -38,12 +55,12 @@ const Mainvisual = () => {
                         </h1>
                         <p className={`${styles.mv__subcopy} js-subcopy`}>Front-end development, flat illustration and motion design regardless of individuals or companies.</p>
                     </div>
-                    <div className={styles.mv__anim}>
+                    <div className={`${styles.mv__anim} js-ph`}>
                         <Lottie options={defaultOptions} />
                     </div>
                 </div>
-                <div className={styles.scrollDown}></div>
-                <p className={styles.scrollTxt}>Scroll</p>
+                <div className={`${styles.scrollDown} js-mouse`}></div>
+                <p className={`${styles.scrollTxt} js-mouse`}>Scroll</p>
             </div>
         </div>
     );
