@@ -7,6 +7,7 @@ import Header from '../components/header';
 import MainVisual from '../components/mainvisual';
 import About from '../components/about';
 import Title from '../components/title';
+import TopContact from '../components/top_contact';
 
 export default function Home({ works, minimals }) {
     return (
@@ -65,6 +66,7 @@ export default function Home({ works, minimals }) {
                 </section>
             </div>
             <About />
+            <TopContact />
         </div>
     );
 }
