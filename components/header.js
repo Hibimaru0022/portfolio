@@ -23,13 +23,10 @@ const Header = () => {
                                 <Link href="./">Home</Link>
                             </li>
                             <li>
-                                <Link href="./">Works</Link>
+                                <Link href="#works">Works</Link>
                             </li>
                             <li>
-                                <Link href="./">Illustration</Link>
-                            </li>
-                            <li>
-                                <Link href="./">About</Link>
+                                <Link href="about">About</Link>
                             </li>
                         </ul>
                         <button className={`${styles.contact__btn} ${styles.visible_wide}`}>
@@ -54,13 +51,10 @@ const Header = () => {
                                     <Link href="./">Works</Link>
                                 </li>
                                 <li className={styles.menu__list__col}>
-                                    <Link href="./">Illustration</Link>
+                                    <Link href="#about">About</Link>
                                 </li>
                                 <li className={styles.menu__list__col}>
-                                    <Link href="./">About</Link>
-                                </li>
-                                <li className={styles.menu__list__col}>
-                                    <Link href="./">Contact</Link>
+                                    <Link href="#contact">Contact</Link>
                                 </li>
                             </ul>
                         </div>

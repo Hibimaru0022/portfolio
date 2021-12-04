@@ -8,6 +8,7 @@
 @import './foundation/mixin/font';
 @import './foundation/mixin/mediaquery';
 @import './foundation/mixin/position';
+@import './foundation/mixin/visible';
 
 // layout
 @import './layout/inner';
@@ -20,9 +21,9 @@
 @import './page/works';
 @import './page/minimals';
 @import './page/about';
+@import './page/top-contact';
 
 // components
 @import './object/component/scroll';
-@import './object/component/visible';
 @import './object/component/ttl';
 @import './object/component/more';

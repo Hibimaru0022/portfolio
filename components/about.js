@@ -31,11 +31,11 @@ const About = () => {
                                 Front-end development, flat illustration and motion design regardless of individuals or companies.Front-end development, flat illustration and motion design regardless
                                 of individuals or companies.
                             </p>
-                            <ul className={`${styles.about__skill} ${styles.visible_wide}`}>
-                                <li>
+                            <ul className={styles.about__skill}>
+                                <li className={styles.visible_wide}>
                                     <Image src="/img/ico_development.svg" width={82} height={82} alt="Development" />
                                 </li>
-                                <li>
+                                <li className={styles.visible_wide}>
                                     <Image src="/img/ico_illustration.svg" width={82} height={82} alt="Illustration" />
                                 </li>
                             </ul>

@@ -1,7 +1,7 @@
 .about {
     background: #f8fbff;
 
-    margin: vw(110) auto 0;
+    margin: vw(72) auto 0;
     position: relative;
     width: 100%;
 
@@ -133,9 +133,9 @@
 }
 
 .waves {
-    @include relPosition(vw(120), 0);
+    @include relPosition(vw(76), 0);
     width: 100%;
-    height: vw(39);
+    height: vw(38);
 
     @include MQ_WIDE {
         @include relPosition(174px, 0);

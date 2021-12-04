@@ -5,11 +5,11 @@ import Title from './title';
 
 const TopContact = () => {
     return (
-        <section className={styles.contact}>
+        <section className={styles.top_contact}>
             <div className={styles.inner}>
                 <Title title={'Contact'} />
                 <p className={styles.contact__msg}>
-                    このサイトに関するご意見やご感想、その他お問い合わせなど、フォームよりお受付しております。
+                    このサイトに関するご意見やご感想、 その他お問い合わせなど、 フォームよりお受付しております。
                     <br />
                     なんでもお気軽にご連絡ください。
                 </p>

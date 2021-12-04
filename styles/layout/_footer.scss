@@ -1,7 +1,56 @@
-.l-footer {
+.footer {
+    margin-top: vw(100);
     width: 100%;
+    position: relative;
 
-    @include MQ_NARROW {
-        display: none;
+    @include MQ_WIDE {
+        margin-top: 100px;
+    }
+
+    &__img {
+        margin: 0 auto;
+        background: url(../../public/img/bg_footer_illust.svg) no-repeat bottom center;
+        background-size: cover;
+        content: '';
+        display: block;
+        width: vw(334);
+        height: vw(123);
+
+        @include MQ_WIDE {
+            width: 853px;
+            height: 314px;
+        }
+    }
+
+    &__bg {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px 0;
+        background: #aabacb;
+        width: 100%;
+        height: vw(100);
+
+        @include MQ_WIDE {
+            height: 100px;
+        }
+    }
+
+    &__logo {
+        width: vw(128);
+
+        @include MQ_WIDE {
+            width: 128px;
+        }
+    }
+
+    &__copyright {
+        font-size: vw(10);
+
+        @include MQ_WIDE {
+            font-size: 10px;
+        }
     }
 }
