@@ -1,0 +1,42 @@
+// scroll down
+.c_scrollDown {
+    // margin: vw(60) auto 0;
+    @include absPosition(null, 50%, 5%, null);
+    width: vw(42);
+    transform: translateX(-50%);
+    text-align: center;
+
+    .c_mouse {
+        border-radius: vw(12);
+        border: 2px solid $primary-color;
+        height: 22px;
+        width: 12px;
+        display: inline-block;
+
+        @include MQ_WIDE {
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        &:before {
+            animation: circleAnim 2s ease infinite;
+            content: '';
+            display: block;
+            margin: 2px auto 0;
+            background: $primary-color;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.c_scrollTxt {
+    color: $primary-color;
+    text-align: center;
+    font-size: vw(11);
+    width: 100%;
+
+    @include MQ_WIDE {
+        font-size: 11px;
+    }
+}

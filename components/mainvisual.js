@@ -59,8 +59,6 @@ const Mainvisual = () => {
                         <Lottie options={defaultOptions} />
                     </div>
                 </div>
-                <div className={`${styles.scrollDown} js-mouse`}></div>
-                <p className={`${styles.scrollTxt} js-mouse`}>Scroll</p>
             </div>
         </div>
     );
