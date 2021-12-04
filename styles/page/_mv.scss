@@ -1,6 +1,5 @@
 .mv {
     width: 100%;
-    height: 100vh;
     position: relative;
     z-index: 1;
 
@@ -18,6 +17,7 @@
 
     &__catch {
         order: 2;
+        margin-top: vw(-20);
 
         @include MQ_WIDE {
             margin: 0;

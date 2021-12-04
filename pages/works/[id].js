@@ -1,19 +1,26 @@
 // pages/works/[id].js
 import { client } from '../../libs/client';
 import styles from '../../styles/Home.module.scss';
+import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 export default function WorksId({ works }) {
     return (
         <main className={styles.main}>
-            <h1 className={styles.title}>{works.title}</h1>
-            <p className={styles.publishedAt}>{works.publishedAt}</p>
-            <p className="category">{works.category && `${works.category.name}`}</p>
-            <div
-                dangerouslySetInnerHTML={{
-                    __html: `${works.body}`,
-                }}
-                className={styles.post}
-            />
+            <Header />
+            <div className={styles.inner}>
+                <article className={styles.article}>
+                    <h1 className={styles.title}>{works.title}</h1>
+                    <p className={styles.category}>{works.category && `${works.category.name}`}</p>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: `${works.body}`,
+                        }}
+                        className={styles.post}
+                    />
+                </article>
+            </div>
+            <Footer />
         </main>
     );
 }

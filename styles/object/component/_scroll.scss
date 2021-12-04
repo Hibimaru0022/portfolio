@@ -1,7 +1,6 @@
 // scroll down
 .c_scrollDown {
-    // margin: vw(60) auto 0;
-    @include absPosition(null, 50%, 5%, null);
+    @include absPosition(null, 50%, 10px, null);
     width: vw(42);
     transform: translateX(-50%);
     text-align: center;

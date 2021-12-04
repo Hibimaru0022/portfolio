@@ -9,6 +9,14 @@ import About from '../components/about';
 import Title from '../components/title';
 import TopContact from '../components/top_contact';
 import Footer from '../components/footer';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Autoplay } from 'swiper';
+SwiperCore.use([Autoplay, Navigation]);
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 export default function Home({ works, minimals }) {
     return (
@@ -16,26 +24,58 @@ export default function Home({ works, minimals }) {
             <div className={styles.l_kv}>
                 <Header />
                 <MainVisual />
+                <div className={`${styles.c_scrollDown} js-mouse`}>
+                    <span className={styles.c_mouse}></span>
+                    <p className={`${styles.c_scrollTxt} js-mouse`}>Scroll</p>
+                </div>
             </div>
             <div className={styles.inner}>
                 <section className={styles.works} id="works">
                     <Title title={'Works'} />
-                    <ul className={`${styles.works__list} ${styles.slider}`}>
-                        {works.map((works) => (
-                            <li key={works.id} className={styles.works__col}>
-                                <Link href={`/works/${works.id}`}>
-                                    <a>
-                                        <figure className={styles.works__col__thumbnail}>
-                                            <img src={works.img.url} alt={works.title} />
-                                        </figure>
-                                        <div className={styles.works__col__info}>
-                                            <h4 className={styles.works__col__ttl}>{works.title}</h4>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
+                    <Swiper
+                        breakpoints={{
+                            // when window width is >= 640px
+                            768: {
+                                // width: 764,
+                                slidesPerView: 2,
+                                spaceBetween: 40,
+                            },
+                            1000: {
+                                slidesPerView: 4,
+                                spaceBetween: 50,
+                            },
+                        }}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        slidesPerView={2}
+                        spaceBetween={30}
+                        loop={true}
+                        Autoplay={true}
+                        navigation
+                        pagination={{ clickable: true }}
+                        scrollbar={{ draggable: true }}
+                    >
+                        <ul className={`${styles.works__list} ${styles.slider}`}>
+                            {works.map((works) => (
+                                <SwiperSlide key={works.id} className={`${styles.works__col}`}>
+                                    <Link href={`/works/${works.id}`}>
+                                        <a>
+                                            <figure className={styles.works__col__thumbnail}>
+                                                <img src={works.img.url} alt={works.title} />
+                                            </figure>
+                                            <div className={styles.works__col__info}>
+                                                <h4 className={styles.works__col__ttl}>{works.title}</h4>
+                                            </div>
+                                        </a>
+                                    </Link>
+                                </SwiperSlide>
+                            ))}
+                        </ul>
+                    </Swiper>
+                    <div className="button_prev"></div>
+                    <div className="button_next"></div>
 
                     <button className={styles.more}>
                         <Link href="/works_list">
@@ -70,6 +110,7 @@ export default function Home({ works, minimals }) {
             </div>
             <About />
             <TopContact />
+            <div className={styles.footer__img}></div>
             <Footer />
         </div>
     );
@@ -77,7 +118,7 @@ export default function Home({ works, minimals }) {
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
-    const worksData = await client.get({ endpoint: 'works', queries: { limit: 4 } });
+    const worksData = await client.get({ endpoint: 'works', queries: { limit: 8 } });
     // const minimalsData = await client.get({ endpoint: 'minimals', queries: { limit: 5 } });
 
     return {

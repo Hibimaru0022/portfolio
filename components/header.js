@@ -15,7 +15,11 @@ const Header = () => {
             <div className={styles.inner}>
                 <div className={styles.navigation}>
                     <h1 className={open ? styles.close : styles.logo}>
-                        <Image src="/img/logo.svg" alt="Hibimaru" width={120} height={36} />
+                        <Link href="./">
+                            <a>
+                                <Image src="/img/logo.svg" alt="Hibimaru" width={182} height={34} />
+                            </a>
+                        </Link>
                     </h1>
                     <nav className={styles.nav}>
                         <ul className={`${styles.navmenu} ${styles.visible_wide}`}>

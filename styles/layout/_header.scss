@@ -21,7 +21,6 @@
     z-index: 100;
 
     @include MQ_WIDE {
-        width: 192px;
         position: inherit;
     }
 }

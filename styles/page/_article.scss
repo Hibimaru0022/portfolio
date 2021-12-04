@@ -1,0 +1,29 @@
+.article {
+    color: $primary-color;
+    width: 100%;
+    margin: 100px auto 0;
+
+    @include MQ_WIDE {
+        max-width: 900px;
+    }
+
+    h1 {
+        font-size: vw(22);
+        font-weight: bold;
+        @include MQ_WIDE {
+            font-size: 22px;
+        }
+    }
+
+    .category {
+        color: $secondary-color;
+    }
+}
+
+.post {
+    margin-top: 50px;
+    color: $primary-color;
+    img {
+        height: auto;
+    }
+}
