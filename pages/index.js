@@ -46,7 +46,7 @@ export default function Home({ works, minimals }) {
                         </Link>
                     </button>
                 </section>
-                <section className={styles.minimals} id="minimals">
+                {/* <section className={styles.minimals} id="minimals">
                     <Title title={'Minimals'} />
                     <ul className={`${styles.minimals__list} ${styles.slider}`}>
                         {minimals.map((minimals) => (
@@ -69,7 +69,7 @@ export default function Home({ works, minimals }) {
                             <a>More</a>
                         </Link>
                     </button>
-                </section>
+                </section> */}
             </div>
             <About />
             <TopContact />
@@ -80,12 +80,12 @@ export default function Home({ works, minimals }) {
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
     const worksData = await client.get({ endpoint: 'works', queries: { limit: 4 } });
-    const minimalsData = await client.get({ endpoint: 'minimals', queries: { limit: 5 } });
+    // const minimalsData = await client.get({ endpoint: 'minimals', queries: { limit: 5 } });
 
     return {
         props: {
             works: worksData.contents,
-            minimals: minimalsData.contents,
+            // minimals: minimalsData.contents,
         },
     };
 };
