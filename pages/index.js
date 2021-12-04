@@ -16,10 +16,6 @@ export default function Home({ works, minimals }) {
             <div className={styles.l_kv}>
                 <Header />
                 <MainVisual />
-                <div className={`${styles.c_scrollDown} js-mouse`}>
-                    <span className={styles.c_mouse}></span>
-                    <p className={`${styles.c_scrollTxt} js-mouse`}>Scroll</p>
-                </div>
             </div>
             <div className={styles.inner}>
                 <section className={styles.works} id="works">

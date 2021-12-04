@@ -60,6 +60,10 @@ const Mainvisual = () => {
                     </div>
                 </div>
             </div>
+            <div className={`${styles.c_scrollDown} js-mouse`}>
+                <span className={styles.c_mouse}></span>
+                <p className={`${styles.c_scrollTxt} js-mouse`}>Scroll</p>
+            </div>
         </div>
     );
 };

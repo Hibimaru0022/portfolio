@@ -43,6 +43,7 @@
             &:hover {
                 background-color: $primary-color;
                 color: #fff;
+                transform: translateY(-3px);
             }
         }
     }
@@ -59,6 +60,14 @@
     :nth-of-type(n + 2) {
         @include MQ_WIDE {
             padding-left: 54px;
+        }
+    }
+
+    li {
+        transition: 0.3s;
+        &:hover {
+            color: $primary-color;
+            transform: translateY(-3px);
         }
     }
 }
