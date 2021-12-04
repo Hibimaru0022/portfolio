@@ -5,7 +5,7 @@ import Title from './title';
 
 const TopContact = () => {
     return (
-        <section className={styles.top_contact}>
+        <section className={styles.contact}>
             <div className={styles.inner}>
                 <Title title={'Contact'} />
                 <p className={styles.contact__msg}>
