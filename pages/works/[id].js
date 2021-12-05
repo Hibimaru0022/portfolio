@@ -5,7 +5,7 @@ import Header from '../../components/header';
 import Footer from '../../components/footer';
 import Head from 'next/head';
 
-export default function WorksId({ works }, { title = 'Hibimaru Portfolio', description = 'これはHibimaruのポートフォリオサイトです。' }) {
+export default function WorksId({ works }, { title = 'Hibimaru Portfolio', description = 'これはHibimaruのポートフォリオサイトです。', ogImage = 'hibimaru.com/public/img/ogp_img.jpg' }) {
     return (
         <div className={styles.wrap}>
             <Head>
@@ -13,7 +13,7 @@ export default function WorksId({ works }, { title = 'Hibimaru Portfolio', descr
                 <meta property="description" content={description} />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
-                <meta property="og:image" content={'hibimaru.com/img/ogp_img.jpg'} />
+                <meta property="og:image" content={ogImage} />
                 <meta name="twitter:card" content="summary" />
             </Head>
             <main className={styles.main}>

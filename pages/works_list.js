@@ -7,7 +7,7 @@ import Head from 'next/head';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-export default function WorksList({ works }, { title = 'Hibimaru Portfolio', description = 'これはHibimaruのポートフォリオサイトです。', ogImage = 'hibimaru.com/public/img/ogp_img.jpg' }) {
+export default function WorksList({ works }, { title = 'Hibimaru Portfolio', description = 'これはHibimaruのポートフォリオサイトです。', ogImage = 'https://hibimaru.com/img/ogp_img.jpg' }) {
     return (
         <>
             <Head>
