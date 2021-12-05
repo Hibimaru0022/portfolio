@@ -1,9 +1,9 @@
 // pages/index.js
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
-import React from 'react';
+import React, { state, useState, useEffect } from 'react';
 import { client } from '../libs/client';
-import Head from 'next/dist/shared/lib/head';
+import Head from 'next/head';
 import Header from '../components/header';
 import MainVisual from '../components/mainvisual';
 import About from '../components/about';
@@ -16,7 +16,7 @@ SwiperCore.use([Autoplay]);
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
-export default function Home({ works }, { title = 'Photo Application', description = 'This is Photo Application!!!!' }) {
+export default function Home({ works }, { title = 'Hibimaru Portfolio', description = "'This is Takumi Hibimaru's portfolio site." }) {
     return (
         <>
             <Head>
