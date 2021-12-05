@@ -25,7 +25,15 @@ const Contact = ({ title = 'Hibimaru Portfolio', description = "'This is Hibimar
         );
     };
     return (
-        <div>
+        <>
+            <Head>
+                <title>{title}</title>
+                <meta property="description" content={description} />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={'https://protfolio.hibimaru.com/public/img/ogp_img.jpg'} />
+                <meta name="twitter:card" content="summary" />
+            </Head>
             <Header />
             <section className={styles.contact}>
                 <div className={styles.inner}>
@@ -43,14 +51,14 @@ const Contact = ({ title = 'Hibimaru Portfolio', description = "'This is Hibimar
                             <input type="email" placeholder="Email" name="user_email" className={styles.c_form__border} />
                         </div>
                         <textarea rows="5" type="text" placeholder="Message" name="message" className={styles.c_form__border} />
-                        <button className={styles.more}>Submit</button>
+                        <button className={`${styles.more} ${styles._submit}`}>Submit</button>
                         <div className={styles.thanks__txt}>{done && 'お問い合わせありがとうございます！'}</div>
                     </form>
                 </div>
             </section>
             <div className={styles.footer__img}></div>
             <Footer />
-        </div>
+        </>
     );
 };
 export default Contact;

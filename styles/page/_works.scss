@@ -12,8 +12,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
     color: $primary-color;
+    padding: 0 0 vw(20);
+
     @include MQ_WIDE {
-        // flex-wrap: nowrap;
+        padding: 60px 0;
     }
 }
 

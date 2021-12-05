@@ -1,5 +1,5 @@
 // about page
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
 import AboutTtl from './about_ttl';
@@ -24,7 +24,7 @@ const About = () => {
                             <Image src="/img/ph_my-icon.svg" width={250} height={180} alt="Hibimaru" />
                         </div>
                         <div className={styles.about__read}>
-                            <AboutTtl title={'About Me'} />
+                            <AboutTtl title={'About Me'} className="scroll" />
                             <p className={`${styles.about__txt} ${styles.visible_wide}`}>
                                 <strong>Hi! My name is Hibiki Shono.</strong>
                                 <br />
