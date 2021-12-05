@@ -9,7 +9,7 @@ const TopContact = () => {
             <div className={styles.inner}>
                 <Title title={'Contact'} />
                 <p className={styles.contact__msg}>
-                    このサイトに関するご意見やご感想、 その他お問い合わせなど、 フォームよりお受付しております。
+                    このサイトに関するご意見やご感想、 その他お問い合わせなど、 フォームより受け付けております。
                     <br />
                     なんでもお気軽にご連絡ください。
                 </p>
