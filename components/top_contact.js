@@ -14,7 +14,7 @@ const TopContact = () => {
                     なんでもお気軽にご連絡ください。
                 </p>
                 <button className={styles.more}>
-                    <Link href="/contact/contact">
+                    <Link href="/contact">
                         <a>Send</a>
                     </Link>
                 </button>
