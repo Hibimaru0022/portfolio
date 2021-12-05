@@ -7,7 +7,7 @@ import Head from 'next/head';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-export default function WorksList({ works }, { title = 'Hibimaru Portfolio', description = "'This is Hibimaru's portfolio site." }) {
+export default function WorksList({ works }, { title = 'Hibimaru Portfolio', description = 'これはHibimaruのポートフォリオサイトです。' }) {
     return (
         <>
             <Head>

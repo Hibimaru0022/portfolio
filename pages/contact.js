@@ -7,7 +7,7 @@ import Footer from '../components/footer';
 import emailjs from 'emailjs-com';
 import Head from 'next/head';
 
-const Contact = ({ title = 'Hibimaru Portfolio', description = "'This is Hibimaru's portfolio site." }) => {
+const Contact = ({ title = 'Hibimaru Portfolio', description = 'これはHibimaruのポートフォリオサイトです。' }) => {
     const formRef = useRef();
     const [done, setDone] = useState(false);
 
@@ -31,7 +31,7 @@ const Contact = ({ title = 'Hibimaru Portfolio', description = "'This is Hibimar
                 <meta property="description" content={description} />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
-                <meta property="og:image" content={'https://protfolio.hibimaru.com/public/img/ogp_img.jpg'} />
+                <meta property="og:image" content={'hibimaru.com/img/ogp_img.jpg'} />
                 <meta name="twitter:card" content="summary" />
             </Head>
             <Header />
