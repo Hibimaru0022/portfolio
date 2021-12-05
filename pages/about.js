@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-const About = ({ title = 'Hibimaru Portfolio', description = 'これはHibimaruのポートフォリオサイトです。' }) => {
+const About = ({ title = 'Hibimaru Portfolio', description = 'これはHibimaruのポートフォリオサイトです。', ogImage = 'hibimaru.com/public/img/ogp_img.jpg' }) => {
     return (
         <>
             <Head>
@@ -15,7 +15,7 @@ const About = ({ title = 'Hibimaru Portfolio', description = 'これはHibimaru�
                 <meta property="description" content={description} />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
-                <meta property="og:image" content={'hibimaru.com/img/ogp_img.jpg'} />
+                <meta property="og:image" content={ogImage} />
                 <meta name="twitter:card" content="summary" />
             </Head>
             <Header />

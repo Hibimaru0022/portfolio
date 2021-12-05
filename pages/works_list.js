@@ -7,7 +7,7 @@ import Head from 'next/head';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-export default function WorksList({ works }, { title = 'Hibimaru Portfolio', description = 'これはHibimaruのポートフォリオサイトです。' }) {
+export default function WorksList({ works }, { title = 'Hibimaru Portfolio', description = 'これはHibimaruのポートフォリオサイトです。', ogImage = 'hibimaru.com/public/img/ogp_img.jpg' }) {
     return (
         <>
             <Head>
@@ -15,7 +15,7 @@ export default function WorksList({ works }, { title = 'Hibimaru Portfolio', des
                 <meta property="description" content={description} />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
-                <meta property="og:image" content={'https://protfolio.hibimaru.com/public/img/ogp_img.jpg'} />
+                <meta property="og:image" content={ogImage} />
                 <meta name="twitter:card" content="summary" />
             </Head>
             <div className={styles.wrap}>
