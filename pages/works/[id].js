@@ -3,25 +3,33 @@ import { client } from '../../libs/client';
 import styles from '../../styles/Home.module.scss';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
+import Head from 'next/head';
 
 export default function WorksId({ works }) {
     return (
-        <main className={styles.main}>
-            <Header />
-            <div className={styles.inner}>
-                <article className={styles.article}>
-                    <h1 className={styles.title}>{works.title}</h1>
-                    <p className={styles.category}>{works.category && `${works.category.name}`}</p>
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: `${works.body}`,
-                        }}
-                        className={styles.post}
-                    />
-                </article>
-            </div>
+        <div className={styles.wrap}>
+            <Head>
+                <title>{works.title}</title>
+                <meta property="og:image" content={works.img.url} />
+                <meta name="twitter:card" content="summary" />
+            </Head>
+            <main className={styles.main}>
+                <Header />
+                <div className={styles.inner}>
+                    <article className={styles.article}>
+                        <h1 className={styles.title}>{works.title}</h1>
+                        <p className={styles.category}>{works.category && `${works.category.name}`}</p>
+                        <div
+                            dangerouslySetInnerHTML={{
+                                __html: `${works.body}`,
+                            }}
+                            className={styles.post}
+                        />
+                    </article>
+                </div>
+            </main>
             <Footer />
-        </main>
+        </div>
     );
 }
 

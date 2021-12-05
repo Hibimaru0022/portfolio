@@ -5,8 +5,9 @@ import Title from '../components/title';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import emailjs from 'emailjs-com';
+import Head from 'next/head';
 
-const Contact = () => {
+const Contact = ({ title = 'Hibimaru Portfolio', description = "'This is Hibimaru's portfolio site." }) => {
     const formRef = useRef();
     const [done, setDone] = useState(false);
 

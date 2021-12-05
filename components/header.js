@@ -3,6 +3,7 @@ import Link from 'next/dist/client/link';
 import styles from '../styles/Home.module.scss';
 import Head from 'next/head';
 import Image from 'next/image';
+import Home from '../pages';
 
 const Header = () => {
     const [open, setIsOpen] = useState(false);
@@ -15,7 +16,7 @@ const Header = () => {
             <div className={styles.inner}>
                 <div className={styles.navigation}>
                     <h1 className={open ? styles.close : styles.logo}>
-                        <Link href="./">
+                        <Link href="/">
                             <a>
                                 <Image src="/img/logo.svg" alt="Hibimaru" width={182} height={34} />
                             </a>
@@ -24,7 +25,7 @@ const Header = () => {
                     <nav className={styles.nav}>
                         <ul className={`${styles.navmenu} ${styles.visible_wide}`}>
                             <li>
-                                <Link href="./">
+                                <Link href="/">
                                     <a>Home</a>
                                 </Link>
                             </li>

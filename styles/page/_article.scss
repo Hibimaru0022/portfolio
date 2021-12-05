@@ -1,7 +1,9 @@
 .article {
     color: $primary-color;
     width: 100%;
+    min-height: 100%;
     margin: 100px auto 0;
+    padding: 0 0 vw(20);
 
     @include MQ_WIDE {
         max-width: 900px;

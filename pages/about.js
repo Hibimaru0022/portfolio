@@ -1,18 +1,22 @@
 // about page
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
 import AboutTtl from '../components/about_ttl';
 import Image from 'next/image';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-const About = () => {
+const About = ({ title = 'Hibimaru Portfolio', description = "'This is Hibimaru's portfolio site." }) => {
     return (
-        <div>
+        <>
             <Head>
-                <title>Hibimaru プロフィール</title>
+                <title>{title}</title>
+                <meta property="description" content={description} />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={'https://protfolio.hibimaru.com/public/ogp_img.jpg'} />
+                <meta name="twitter:card" content="summary" />
             </Head>
             <Header />
             <svg className={styles.waves__prof} xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
@@ -71,7 +75,7 @@ const About = () => {
                 </div>
             </section>
             <Footer />
-        </div>
+        </>
     );
 };
 

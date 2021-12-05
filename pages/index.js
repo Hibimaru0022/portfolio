@@ -24,8 +24,8 @@ export default function Home({ works }, { title = 'Hibimaru Portfolio', descript
                 <meta property="description" content={description} />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
-                <meta property="og:image" content={'/ogp_img.jpg'} />
-                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="og:image" content={'https://protfolio.hibimaru.com/public/img/ogp_img.jpg'} />
+                <meta name="twitter:card" content="summary" />
             </Head>
             <div className={styles.wrap}>
                 <div className={styles.l_kv}>
@@ -58,7 +58,7 @@ export default function Home({ works }, { title = 'Hibimaru Portfolio', descript
                             }}
                             slidesPerView={2}
                             spaceBetween={30}
-                            loop={true}
+                            // loop={true}
                             Autoplay={true}
                             scrollbar={{ draggable: true }}
                         >
