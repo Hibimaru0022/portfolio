@@ -1,14 +1,21 @@
 // about page
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
-import AboutTtl from './about_ttl';
+import AboutTtl from '../components/about_ttl';
 import Image from 'next/image';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 const About = () => {
     return (
         <div>
-            <svg className={styles.waves} xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+            <Head>
+                <title>Hibimaru プロフィール</title>
+            </Head>
+            <Header />
+            <svg className={styles.waves__prof} xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
                 <defs>
                     <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                 </defs>
@@ -17,7 +24,7 @@ const About = () => {
                     <use xlinkHref="#gentle-wave" x="48" y="2" fill="rgba(248,251,255,1)" />
                 </g>
             </svg>
-            <section className={styles.about} id="about">
+            <section className={`${styles.about} ${styles._prof}`} id="about">
                 <div className={styles.about__inner}>
                     <div className={styles.about__info}>
                         <div className={styles.about__ph}>
@@ -26,10 +33,13 @@ const About = () => {
                         <div className={styles.about__read}>
                             <AboutTtl title={'About Me'} />
                             <p className={`${styles.about__txt} ${styles.visible_wide}`}>
-                                <strong>Hi! My name is Hibiki Shono.</strong>
+                                <strong>庄野 響</strong>
                                 <br />
-                                Front-end development, flat illustration and motion design regardless of individuals or companies.Front-end development, flat illustration and motion design regardless
-                                of individuals or companies.
+                                1998年、徳島県の右下に生まれました。商業高校を卒業後、神戸の専門学校でデザインを学び、印刷会社やゲーム会社でデザイナーを経験しました。
+                                <br />
+                                現在は、主にWebフロントエンドの実装と、線画が特徴のベクターイラストレーションアニメーションを制作しています。
+                                <br />
+                                私は小さい頃から物を作るのが大好きでした。同じものづくりが好きなクリエイターさんのWebサイト制作などのお手伝いもできると嬉しいです。コラボレーションもお待ちしてます！
                             </p>
                             <ul className={styles.about__skill}>
                                 <li className={styles.visible_wide}>
@@ -39,18 +49,16 @@ const About = () => {
                                     <Image src="/img/ico_illustration.svg" width={82} height={82} alt="Illustration" />
                                 </li>
                             </ul>
-                            <button className={`${styles.more} ${styles._about_wide}`}>
-                                <Link href="/about">
-                                    <a>More</a>
-                                </Link>
-                            </button>
                         </div>
                     </div>
                     <p className={`${styles.about__txt} ${styles.visible_nrw}`}>
-                        Hi! My name is Hibiki Shono.
+                        <strong>庄野 響</strong>
                         <br />
-                        Front-end development, flat illustration and motion design regardless of individuals or companies.Front-end development, flat illustration and motion design regardless of
-                        individuals or companies.
+                        1998年、徳島県の右下に生まれました。商業高校を卒業後、神戸の専門学校でデザインを学び、印刷会社やゲーム会社でデザイナーを経験しました。
+                        <br />
+                        現在は、主にWebフロントエンドの実装と、線画が特徴のベクターイラストレーションアニメーションを制作しています。
+                        <br />
+                        私は小さい頃から物を作るのが大好きでした。同じものづくりが好きなクリエイターさんのWebサイト制作などのお手伝いもできると嬉しいです。コラボレーションもお待ちしてます！
                     </p>
                     <ul className={`${styles.about__skill} ${styles.visible_nrw_skill}`}>
                         <li>
@@ -62,6 +70,7 @@ const About = () => {
                     </ul>
                 </div>
             </section>
+            <Footer />
         </div>
     );
 };

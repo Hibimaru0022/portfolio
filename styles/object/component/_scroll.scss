@@ -5,6 +5,10 @@
     transform: translateX(-50%);
     text-align: center;
 
+    @include MQ_WIDE {
+        @include absPosition(null, 50%, 16px, null);
+    }
+
     .c_mouse {
         border-radius: vw(12);
         border: 2px solid $primary-color;

@@ -33,17 +33,20 @@
         border: 2px solid $primary-color;
         border-radius: 30px;
         color: $primary-color;
+        font-weight: 500;
         transition: 0.3s;
+        margin-left: 54px;
 
-        @include MQ_WIDE {
-            padding: 12px 20px;
-            margin-left: 54px;
-
-            &:hover {
-                background-color: $primary-color;
-                color: #fff;
-                transform: translateY(-3px);
+        a {
+            @include MQ_WIDE {
+                display: block;
+                padding: 12px 20px;
             }
+        }
+        &:hover {
+            background-color: $primary-color;
+            color: #fff;
+            transform: translateY(-3px);
         }
     }
 }

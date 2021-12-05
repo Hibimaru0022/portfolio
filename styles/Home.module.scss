@@ -21,11 +21,12 @@
 @import './page/works';
 @import './page/article';
 @import './page/minimals';
-@import './page/about';
 @import './page/top-contact';
+@import './page/about';
 
 // components
+@import './object/component/form';
+@import './object/component/more';
 @import './object/component/scroll';
 @import './object/component/ttl';
-@import './object/component/more';
-@import './object/component/form';
+@import './object/component/waves';

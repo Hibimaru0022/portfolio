@@ -1,13 +1,15 @@
 // works list page
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
-import React, { state, useState } from 'react';
 import { client } from '../libs/client';
 import Title from '../components/title';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 export default function WorksList({ works }) {
     return (
         <div className={styles.wrap}>
+            <Header />
             <div className={styles.inner}>
                 <div className={styles.works} id="works">
                     <Title title={'Works'} />
@@ -29,6 +31,7 @@ export default function WorksList({ works }) {
                     </ul>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

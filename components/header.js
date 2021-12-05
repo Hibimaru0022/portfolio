@@ -24,17 +24,25 @@ const Header = () => {
                     <nav className={styles.nav}>
                         <ul className={`${styles.navmenu} ${styles.visible_wide}`}>
                             <li>
-                                <Link href="./">Home</Link>
+                                <Link href="./">
+                                    <a>Home</a>
+                                </Link>
                             </li>
                             <li>
-                                <Link href="#works">Works</Link>
+                                <Link href="/works_list">
+                                    <a>Works</a>
+                                </Link>
                             </li>
                             <li>
-                                <Link href="about">About</Link>
+                                <Link href="/about">
+                                    <a>About</a>
+                                </Link>
                             </li>
                         </ul>
                         <button className={`${styles.contact__btn} ${styles.visible_wide}`}>
-                            <Link href="./">Contact</Link>
+                            <Link href="/contact">
+                                <a>Contact</a>
+                            </Link>
                         </button>
                     </nav>
                     <nav className={`${styles.menu__nrw} ${styles.visible_nrw}`}>
@@ -49,16 +57,24 @@ const Header = () => {
                             </h1>
                             <ul className={styles.menu__list}>
                                 <li className={styles.menu__list__col}>
-                                    <Link href="./">Home</Link>
+                                    <Link href="./">
+                                        <a>Home</a>
+                                    </Link>
                                 </li>
                                 <li className={styles.menu__list__col}>
-                                    <Link href="./">Works</Link>
+                                    <Link href="/works_list">
+                                        <a>Works</a>
+                                    </Link>
                                 </li>
                                 <li className={styles.menu__list__col}>
-                                    <Link href="#about">About</Link>
+                                    <Link href="/about">
+                                        <a>About</a>
+                                    </Link>
                                 </li>
                                 <li className={styles.menu__list__col}>
-                                    <Link href="#contact">Contact</Link>
+                                    <Link href="/contact">
+                                        <a>Contact</a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

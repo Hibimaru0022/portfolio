@@ -3,17 +3,18 @@
     position: relative;
 
     &__img {
-        margin: 0 auto;
+        margin: vw(50) auto 0;
         background: url(../../public/img/bg_footer_illust.svg) no-repeat bottom center;
-        background-size: cover;
+        background-size: contain;
         content: '';
         display: block;
         width: vw(334);
         height: vw(123);
 
         @include MQ_WIDE {
-            width: 853px;
-            height: 314px;
+            margin-top: 50px;
+            width: 770px;
+            height: 283px;
         }
     }
 
@@ -43,6 +44,7 @@
 
     &__copyright {
         font-size: vw(10);
+        color: #fff;
 
         @include MQ_WIDE {
             font-size: 10px;

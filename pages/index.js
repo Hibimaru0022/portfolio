@@ -1,8 +1,9 @@
 // pages/index.js
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
-import React, { state, useState, useEffect } from 'react';
+import React from 'react';
 import { client } from '../libs/client';
+import Head from 'next/dist/shared/lib/head';
 import Header from '../components/header';
 import MainVisual from '../components/mainvisual';
 import About from '../components/about';
@@ -10,80 +11,84 @@ import Title from '../components/title';
 import TopContact from '../components/top_contact';
 import Footer from '../components/footer';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Autoplay } from 'swiper';
-SwiperCore.use([Autoplay, Navigation]);
-
+import SwiperCore, { Autoplay } from 'swiper';
+SwiperCore.use([Autoplay]);
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
-export default function Home({ works, minimals }) {
+export default function Home({ works }, { title = 'Photo Application', description = 'This is Photo Application!!!!' }) {
     return (
-        <div className={styles.wrap}>
-            <div className={styles.l_kv}>
-                <Header />
-                <MainVisual />
-                <div className={`${styles.c_scrollDown} js-mouse`}>
-                    <span className={styles.c_mouse}></span>
-                    <p className={`${styles.c_scrollTxt} js-mouse`}>Scroll</p>
+        <>
+            <Head>
+                <title>{title}</title>
+                <meta property="description" content={description} />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={`${process.env.SITE_URL}/ogp_large.png`} />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Head>
+            <div className={styles.wrap}>
+                <div className={styles.l_kv}>
+                    <Header />
+                    <MainVisual />
+                    <div className={`${styles.c_scrollDown} js-mouse`}>
+                        <span className={styles.c_mouse}></span>
+                        <p className={`${styles.c_scrollTxt} js-mouse`}>Scroll</p>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.inner}>
-                <section className={styles.works} id="works">
-                    <Title title={'Works'} />
-                    <Swiper
-                        breakpoints={{
-                            // when window width is >= 640px
-                            768: {
-                                // width: 764,
-                                slidesPerView: 2,
-                                spaceBetween: 40,
-                            },
-                            1000: {
-                                slidesPerView: 4,
-                                spaceBetween: 50,
-                            },
-                        }}
-                        autoplay={{
-                            delay: 2500,
-                            disableOnInteraction: false,
-                        }}
-                        slidesPerView={2}
-                        spaceBetween={30}
-                        loop={true}
-                        Autoplay={true}
-                        navigation
-                        pagination={{ clickable: true }}
-                        scrollbar={{ draggable: true }}
-                    >
-                        <ul className={`${styles.works__list} ${styles.slider}`}>
-                            {works.map((works) => (
-                                <SwiperSlide key={works.id} className={`${styles.works__col}`}>
-                                    <Link href={`/works/${works.id}`}>
-                                        <a>
-                                            <figure className={styles.works__col__thumbnail}>
-                                                <img src={works.img.url} alt={works.title} />
-                                            </figure>
-                                            <div className={styles.works__col__info}>
-                                                <h4 className={styles.works__col__ttl}>{works.title}</h4>
-                                            </div>
-                                        </a>
-                                    </Link>
-                                </SwiperSlide>
-                            ))}
-                        </ul>
-                    </Swiper>
-                    <div className="button_prev"></div>
-                    <div className="button_next"></div>
+                <div className={styles.inner}>
+                    <section className={styles.works} id="works">
+                        <Title title={'Works'} />
+                        <Swiper
+                            breakpoints={{
+                                // when window width is >= 640px
+                                768: {
+                                    // width: 764,
+                                    slidesPerView: 2,
+                                    spaceBetween: 40,
+                                },
+                                1000: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 50,
+                                },
+                            }}
+                            autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: false,
+                            }}
+                            slidesPerView={2}
+                            spaceBetween={30}
+                            loop={true}
+                            Autoplay={true}
+                            scrollbar={{ draggable: true }}
+                        >
+                            <ul className={`${styles.works__list} ${styles.slider}`}>
+                                {works.map((works) => (
+                                    <SwiperSlide key={works.id} className={`${styles.works__col}`}>
+                                        <Link href={`/works/${works.id}`}>
+                                            <a>
+                                                <figure className={styles.works__col__thumbnail}>
+                                                    <img src={works.img.url} alt={works.title} />
+                                                </figure>
+                                                <div className={styles.works__col__info}>
+                                                    <h4 className={styles.works__col__ttl}>{works.title}</h4>
+                                                </div>
+                                            </a>
+                                        </Link>
+                                    </SwiperSlide>
+                                ))}
+                            </ul>
+                        </Swiper>
+                        <div className="button_prev"></div>
+                        <div className="button_next"></div>
 
-                    <button className={styles.more}>
-                        <Link href="/works_list">
-                            <a>More</a>
-                        </Link>
-                    </button>
-                </section>
-                {/* <section className={styles.minimals} id="minimals">
+                        <button className={styles.more}>
+                            <Link href="/works_list">
+                                <a>More</a>
+                            </Link>
+                        </button>
+                    </section>
+                    {/* <section className={styles.minimals} id="minimals">
                     <Title title={'Minimals'} />
                     <ul className={`${styles.minimals__list} ${styles.slider}`}>
                         {minimals.map((minimals) => (
@@ -107,12 +112,13 @@ export default function Home({ works, minimals }) {
                         </Link>
                     </button>
                 </section> */}
+                </div>
+                <About />
+                <TopContact />
+                <div className={styles.footer__img}></div>
+                <Footer />
             </div>
-            <About />
-            <TopContact />
-            <div className={styles.footer__img}></div>
-            <Footer />
-        </div>
+        </>
     );
 }
 

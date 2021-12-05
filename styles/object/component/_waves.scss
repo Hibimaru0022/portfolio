@@ -1,0 +1,39 @@
+.waves {
+    @include relPosition(vw(76), 0);
+    width: 100%;
+    height: vw(38);
+
+    @include MQ_WIDE {
+        @include relPosition(174px, 0);
+        width: 100%;
+        height: 60px;
+    }
+}
+
+.waves__prof {
+    @include relPosition(vw(76), 0);
+    width: 100%;
+    height: vw(38);
+
+    @include MQ_WIDE {
+        @include relPosition(89px, 0);
+        width: 100%;
+        height: 60px;
+    }
+}
+
+.parallax > use {
+    animation: move_forever 23s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 6s;
+}
+@keyframes move_forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
