@@ -16,7 +16,7 @@ SwiperCore.use([Autoplay]);
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
-export default function Home({ works }, { title = 'Hibimaru Portfolio', description = "'This is Takumi Hibimaru's portfolio site." }) {
+export default function Home({ works }, { title = 'Hibimaru Portfolio', description = "'This is Hibimaru's portfolio site." }) {
     return (
         <>
             <Head>
@@ -24,7 +24,7 @@ export default function Home({ works }, { title = 'Hibimaru Portfolio', descript
                 <meta property="description" content={description} />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
-                <meta property="og:image" content={`${process.env.SITE_URL}/ogp_large.png`} />
+                <meta property="og:image" content={'/ogp_img.jpg'} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <div className={styles.wrap}>
