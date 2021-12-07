@@ -9,9 +9,11 @@
         justify-content: space-between;
         flex-direction: column;
         position: relative;
+        padding: 0 10%;
 
         @include MQ_WIDE {
             flex-direction: row;
+            padding: 0 40px;
         }
     }
 
@@ -55,7 +57,7 @@
         @include MQ_WIDE {
             margin: 0;
             order: 2;
-            width: 626px;
+            width: 50%;
         }
     }
 }
