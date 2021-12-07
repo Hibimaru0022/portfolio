@@ -1,21 +1,19 @@
 .mv {
     width: 100%;
-    // position: relative;
+    position: relative;
     z-index: 1;
-    padding: 80px;
 
     &__inner {
         align-items: center;
         display: flex;
-        width: 100%;
         justify-content: space-between;
         flex-direction: column;
-        @include absPosition(50%, 50%);
-        transform: translate(-50%, -50%);
+        position: relative;
         padding: 0 10%;
 
         @include MQ_WIDE {
             flex-direction: row;
+            padding: 0 40px;
         }
     }
 

@@ -1,12 +1,14 @@
 // scroll down
 .c_scrollDown {
-    @include absPosition(null, 50%, 10px, null);
+    @include relPosition(null, 50%, 10px, null);
     width: vw(42);
     transform: translateX(-50%);
     text-align: center;
+    display: none;
 
     @include MQ_WIDE {
-        @include absPosition(null, 50%, 16px, null);
+        @include relPosition(null, 50%, 1vw, null);
+        display: block;
     }
 
     .c_mouse {
