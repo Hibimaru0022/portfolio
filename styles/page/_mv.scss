@@ -1,11 +1,15 @@
 .mv {
     width: 100%;
+    height: 100vh;
     position: relative;
     z-index: 1;
 
     &__inner {
+        @include absPosition(50%, 50%);
+        transform: translate(-50%, -50%);
         align-items: center;
         display: flex;
+        width: 100%;
         justify-content: space-between;
         flex-direction: column;
         position: relative;
@@ -13,17 +17,19 @@
 
         @include MQ_WIDE {
             flex-direction: row;
-            padding: 0 40px;
+            width: 100%;
+            height: 994px;
+            // padding: 0 40px;
         }
     }
 
     &__catch {
         order: 2;
-        margin-top: vw(-20);
+        // margin-top: vw(-20);
 
         @include MQ_WIDE {
             margin: 0;
-            width: 50%;
+            width: 680px;
             order: 1;
         }
     }
@@ -34,7 +40,7 @@
         color: $primary-color;
 
         @include MQ_WIDE {
-            font-size: 62px;
+            font-size: 60px;
             line-height: 1.25;
         }
     }
@@ -57,7 +63,7 @@
         @include MQ_WIDE {
             margin: 0;
             order: 2;
-            width: 50%;
+            width: 624px;
         }
     }
 }
