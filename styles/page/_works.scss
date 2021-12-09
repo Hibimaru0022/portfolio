@@ -34,11 +34,16 @@
         box-shadow: 0 10px 20px rgba($color: #9ccaf8, $alpha: 0.2);
         height: vw(170);
         border-radius: vw(16);
+        transition: 0.3s ease;
 
         @include MQ_WIDE {
             box-shadow: 0 10px 26px rgba($color: #9ccaf8, $alpha: 0.2);
             height: 220px;
             border-radius: 18px;
+            transition: 0.3s;
+            &:hover {
+                transform: translateY(-6px);
+            }
         }
 
         img {

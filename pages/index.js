@@ -58,7 +58,7 @@ export default function Home({ works }, { title = 'Hibimaru Portfolio', descript
                             Autoplay={true}
                             scrollbar={{ draggable: true }}
                         >
-                            <ul className={`${styles.works__list} ${styles.slider}`}>
+                            <div className={`${styles.works__list} ${styles.slider}`}>
                                 {works.map((works) => (
                                     <SwiperSlide key={works.id} className={`${styles.works__col}`}>
                                         <Link href={`/works/${works.id}`}>
@@ -73,7 +73,7 @@ export default function Home({ works }, { title = 'Hibimaru Portfolio', descript
                                         </Link>
                                     </SwiperSlide>
                                 ))}
-                            </ul>
+                            </div>
                         </Swiper>
                         <div className="button_prev"></div>
                         <div className="button_next"></div>
