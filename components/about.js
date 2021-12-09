@@ -28,8 +28,8 @@ const About = () => {
                             <p className={`${styles.about__txt} ${styles.visible_wide}`}>
                                 <strong>Hi! My name is Hibiki Shono.</strong>
                                 <br />
-                                Front-end development, flat illustration and motion design regardless of individuals or companies.Front-end development, flat illustration and motion design regardless
-                                of individuals or companies.
+                                Front-end development, flat illustration and motion design regardless of individuals or companies.
+                                <br />I may be a vegetarian.
                             </p>
                             <ul className={styles.about__skill}>
                                 <li className={styles.visible_wide}>
@@ -49,8 +49,8 @@ const About = () => {
                     <p className={`${styles.about__txt} ${styles.visible_nrw}`}>
                         Hi! My name is Hibiki Shono.
                         <br />
-                        Front-end development, flat illustration and motion design regardless of individuals or companies.Front-end development, flat illustration and motion design regardless of
-                        individuals or companies.
+                        Front-end development, flat illustration and motion design regardless of individuals or companies.
+                        <br />I may be a vegetarian.
                     </p>
                     <ul className={`${styles.about__skill} ${styles.visible_nrw_skill}`}>
                         <li>

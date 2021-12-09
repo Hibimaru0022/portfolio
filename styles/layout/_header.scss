@@ -32,7 +32,7 @@
     align-items: center;
 
     @include MQ_WIDE {
-        @include absPosition(36px, nul, null, 96px);
+        @include absPosition(15px, null, null, 96px);
     }
 
     .contact__btn {
