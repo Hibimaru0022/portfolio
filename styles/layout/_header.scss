@@ -3,11 +3,13 @@
     box-sizing: border-box;
     padding: vw(20) 0;
     width: 100%;
+    height: vw(70);
     position: fixed;
     z-index: 1000;
 
     @include MQ_WIDE {
         padding: 36px 0;
+        height: 42px;
     }
 }
 
@@ -19,11 +21,11 @@
 
 .logo {
     width: vw(110);
-    @include fxdPosition(vw(25), vw(20));
+    @include absPosition(vw(25), vw(20));
     z-index: 100;
 
     @include MQ_WIDE {
-        @include absPosition(20px, 25px);
+        @include absPosition(20px, 96px);
     }
 }
 
