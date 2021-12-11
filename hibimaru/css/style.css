@@ -1,0 +1,1022 @@
+@charset "UTF-8";
+/* CSS Document */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	color: #555;
+       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+}
+a:link {
+	color: #555;
+}
+a:visited {
+	color: #555;
+}
+.content {
+	width: 100%;
+}
+
+.mainvisual {
+	background-image: url(../images/main_visual.png);
+	background-size: 100%;
+	width: 100%;
+	padding-bottom: 33%;
+	max-width: 100%;
+	background-repeat: no-repeat;
+}
+header {
+	width: 100%;
+	font-family: 'Fredoka One', cursive;
+	font-size: 20px;
+	overflow: hidden;
+}
+
+nav ul {
+	width: 60%;
+	float: right;
+	color: #555;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 60px;
+	padding-top: 44px;
+}
+#sp-menu{
+	display: none;
+}
+#menu li {
+	padding-left: 60px;
+}
+#logo {
+	float: left;
+	padding-top: 30px;
+	padding-left: 80px;
+}
+#archive {
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+.category1_t {
+	color: #555555;
+	font-size: 5vw;
+	padding-bottom: 30px;
+	font-family: 'Fredoka One', cursive;
+	text-align: left;
+}
+.category1_t span {
+	color: #2fbdf0;
+}
+.card {
+	text-align: center;
+        justify-content: space-between;
+	margin: 0 auto;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.cardtype {
+	width: calc(100% / 4 - 30px);
+	margin: 15px 10px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow:0px 0px 12px 0px #d4d4d4;
+	-webkit-transition: all .3s;
+    transition: all .3s;
+}
+.cardtype_link img {
+	margin: 20px auto;
+	width: 90%;
+	height: 260px;
+	max-width: 100%;
+	object-fit: cover;
+	border-radius: 6px;
+	text-align: center;
+	overflow: hidden;
+}
+.cardtype:hover {
+	-webkit-transform: translateY(-7px);
+    -ms-transform: translateY(-7px);
+    transform: translateY(-7px);
+}
+.cardtype_info {
+	margin-left: 20px;
+	position: relative;
+	height: 80px;
+}
+.works_title {
+	color: #444444;
+	font-weight: bold;
+        font-size: 1.4em;
+	text-align: left;
+	width: 90%;
+	word-wrap: break-word;
+	position: absolute;
+}
+.works_category {
+	font-size: 0.8em;
+	color: #2fbdf0;
+	text-align: left;
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 15px;
+}
+.category2_t {
+	padding-top: 30px;
+	color: #555555;
+	font-size: 5vw;
+	padding-bottom: 30px;
+	font-family: 'Fredoka One', cursive;
+	text-align: left;
+}
+.category2_t span {
+	color: #2fbdf0;/*青色*/
+}
+.more {
+	width: 150px;
+	margin: 60px auto;
+	padding: 14px;
+	text-align: center;
+	border: solid 3px #00e4ff;
+	border-radius: 30px;
+	font-family: 'Fredoka One', cursive;
+	font-size: 24px;
+}
+.more span {
+	margin-left: 26px;
+}
+.more:hover {
+	background: #00e4ff;
+	color: #fff;
+}
+
+.more:after {
+	content: url(../images/next.svg);
+	display: inline-block;
+    width: 28px;
+    position: relative;
+    left: 18px;
+    vertical-align: middle;
+}
+.contact {
+	background: #fbfbfb;
+	background: linear-gradient(#fbfbfb, #fff);
+	background-size: 100%;
+	width: 100%;
+	margin: 0 auto 120px;
+}
+.contact_t {
+	font-family: 'Fredoka One', cursive;
+	font-size: 36px;
+	text-align: center;
+	line-height: 20px;
+	margin: 100px auto 0 auto;
+	margin-top: 140px;
+	padding-top: 50px;
+}
+.contact_t span:after {
+	background-color: #f48fb1;
+    border-radius:5px;
+    content: "";
+    display: block;
+    height: 10px;
+    width: 200px;
+    margin: 18px auto;
+    background: linear-gradient(to bottom, #caf3ff, #00e4ff);
+}
+.contact_copy  {
+	font-family: 'Fredoka One', cursive;
+	font-size: 5.5vw;
+	line-height: 1.2em;
+	margin: 80px 0 0 50px;
+}
+.information {
+	width: 100%;
+	padding-bottom: 80px;
+	position: absolute;
+	z-index: 100;
+}
+.contact_info {
+	overflow: hidden;
+}
+.contact_info > h2 {
+	margin: 100px 0 0 50px;
+	float: left;
+}
+.contact_info img {
+	width: 120px;
+}
+.e-mail {
+	font-family: 'Fredoka One', cursive;
+	font-size: 28px;
+	color: #2fbdf0;/*青色*/
+	margin-top: 100px;
+}
+.telephone {
+	font-family: 'Fredoka One', cursive;
+	font-size: 28px;
+	color: #2fbdf0;
+	margin-top: 40px;
+}
+.submit_bt span {
+	margin-left: 22px;
+}
+.submit_bt:hover {
+	background: #00e4ff;
+	color: #fff;
+}
+
+.submit_bt:after {
+	content: url(../images/next.svg);
+	display: inline-block;
+    width: 28px;
+    position: relative;
+    left: 8px;
+}
+
+dl {
+	margin-left: 210px;
+}
+dd {
+	margin-top: 10px;
+	font-family: "Helvetica"
+	font-weight: bold;
+	font-size: 20px;
+}
+.submit_bt {
+	margin: 40px 0 0 210px;
+	width: 150px;
+	padding: 12px;
+	text-align: center;
+	border: solid 3px #00e4ff;
+	border-radius: 30px;
+	font-family: 'Fredoka One', cursive;
+	font-size: 22px;
+}
+.imgbox {
+	position: relative;
+	top: 80px;
+	left: 0;
+	z-index: 10;
+	text-align: right;
+}
+footer {
+	font-family: 'Fredoka One', cursive;
+	font-size: 20px;
+	color: #fff;
+	width: 100%;
+	background: url(../images/footer.png) no-repeat center center;
+	background-size: cover;
+}
+.footer_logo {
+	padding: 140px 0 0 50px;
+}
+.footer_a >:first-child {
+	margin-right: auto;
+}
+.footer_a {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.footer_navi {
+	display: flex;
+	padding-top: 190px;
+}
+.footer_navi li {
+	display: flex;
+	margin-right: 40px;
+}
+footer a:link {
+	color: #fff;
+}
+footer a:visited {
+	color: #fff;
+}
+.sns {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 20px;
+}
+.sns li {
+	padding-right: 20px;
+}
+.copy_right {
+        text-align: right;
+        font-size: 0.8em;
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Yu Gothic", YuGothic, sans-serif;
+        padding: 10px 34px 8px 0;
+}
+/*Aboutページ*/
+.about_t {
+	font-family: 'Fredoka One', cursive;
+	font-size: 36px;
+	text-align: center;
+	line-height: 20px;
+}
+.about_t span:after {
+	background-color: #f48fb1;
+    border-radius:5px;
+    content: "";
+    display: block;
+    height: 10px;
+    width: 200px;
+    margin: 18px auto;
+    background: linear-gradient(to bottom, #caf3ff, #00e4ff);
+}
+.skill {
+	margin-right: auto;
+	margin-top: 20px;
+	padding-left: 50px;
+	width: 39vw;
+}
+.profile {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	margin: 50px auto 10px auto;
+}
+.prof_info {
+	width: 50%;
+}
+.prof_info > h3 {
+	font-family: 'Fredoka One', cursive;
+	font-size: 5.5vw;
+	letter-spacing: 0.05em;
+	margin-top: 50px;
+}
+.prof_info > h3 span {
+	color: #bfd500;
+}
+.prof_info > h3 span:last-child {
+	color: #2fbdf0;
+}
+.prof_info > p {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 40px;
+}
+.prof_info > h4 {
+	font-size: 42px;
+	font-weight: bold;
+	margin-top: 12px;
+}
+.prof_info > h4 span {
+	font-size: 16px;
+	padding-left: 20px;
+}
+.prof_info > h5 {
+	font-feature-settings: "palt";
+	margin-top: 26px;
+	line-height: 1.8em;
+	margin-right: 50px;
+	text-align: justify;
+	text-justify: inter-ideograph;
+}
+
+
+/*singleページ*/
+.title {
+	font-family: 'Fredoka One', cursive;
+	font-size: 6.8em;
+	}
+.work {
+	width: 60%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction : column;
+}
+.wp-block-image img {
+    height: auto;
+}
+.photo {
+	margin: 80px auto 50px auto;
+	text-align: center;
+	max-width: 100%;
+	height: auto;
+}
+
+.photo > p {
+	text-align: left;
+	margin-top: 40px;
+	font-size: 20px;
+}
+.tag {
+	font-family: 'Fredoka One', cursive;
+	margin-top: 16px;
+	font-size: 2vw;
+	color: #2fbdf0;
+}
+#sp-icon {
+	display: none;
+}
+.paging {
+	font-size: 18px;
+	width :500px;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	margin: 0 auto;
+	align-self :center;
+}
+.next:after {
+	content: url(../images/next.svg);
+	display: inline-block;
+    width: 28px;
+    vertical-align: middle;
+}
+.next span {
+	font-family: 'Fredoka One', cursive;
+}
+.prev:before {
+	content: url(../images/prev.svg);
+	display: inline-block;
+    width: 28px;
+    vertical-align: middle;
+}
+.prev span {
+	font-family: 'Fredoka One', cursive;
+}
+
+/*contactページ*/
+#mailform {
+	margin-top: 100px;
+}
+.form {
+	margin: 70px auto;
+	width: 70%;
+}
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="url"],
+.wpcf7 textarea {
+	background-color: #fff;
+	color: #333;
+	width: 95%;
+	border: 1px solid #ddd;
+	font-size: 100%;
+	padding: 0.5em;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,.1) inset;
+}
+.wpcf7-submit {
+	width: 100px;
+	margin-top: 8px;
+    padding: 5px;
+    text-align: center;
+    border: solid 2px #00e4ff;
+    border-radius: 30px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 14px;
+    background: white;
+}
+.wpcf7-submit:hover {
+	background: #00e4ff;
+	color: #fff;
+}
+.asterisk {
+	margin: 0 0 0 0.2em;
+	color: #f5637a;
+}
+.subject {
+	margin-top: 8px;
+	margin-bottom: 6px;
+}
+.description {
+	font-size: 16px;
+	color: #888;
+	margin-bottom: 20px;
+	line-height: 18px;
+}
+
+/*iPad*/
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+	#logo {
+		width: 24%;
+		padding: 20px 0 0 20px;
+	}
+	.cardtype {
+		width: calc(100% / 2 - 10px);
+		margin: 15px 5px;
+		border-radius: 8px;
+	}
+	.works_title {
+		font-size: 24px;
+	}
+	.works_category {
+		font-size: 18px;
+	}
+	#menu {
+		display: none;
+	}
+	#sp-icon {
+		display: flex;
+	}
+	#sp-icon {
+		display: block;
+	}
+	.cardtype_info {
+		height: 60px;
+	}
+#menu li {
+	display: none;
+	padding-left: 0;
+}
+ul#sp-menu {
+	width: 100%;
+	list-style-type : none;
+	background: #2fbdf0;
+	opacity : 0.9;
+	position : absolute;
+	left : 0px;
+	top : 0px;
+	z-index : 990;
+	display : none;
+}
+
+ul#sp-menu li {
+	text-align : center;
+}
+
+ul#sp-menu li a {
+	text-decoration : none;
+	display : block;
+	font-size: 22px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: #fff;
+}
+
+ul#sp-menu li a:hover {
+	background: #2fbdf0;
+	opacity : 0.7;
+}
+
+
+div#sp-icon {
+	width : 60px;
+	height : 60px;
+	position : absolute;
+	right : 20px;
+	top : 20px;
+	z-index : 999;
+	background: #2fbdf0;
+	border-radius: 10px;
+}
+
+div#sp-icon:hover {
+	cursor : pointer;
+	opacity : 0.7;
+}
+
+div#sp-icon span,
+div#sp-icon span:before,
+div#sp-icon span:after {
+	display : inline-block;
+	width : 30px;
+	height : 3px;
+	background : #fff;
+	transition-property : transform;
+	transition-duration : 0.3s;
+	border-radius: 20px;
+}
+
+div#sp-icon span {
+	position : absolute;
+	left : 50%;
+	top : 50%;
+	transform : translate( -50%, -50% );
+}
+
+div#sp-icon span:before {
+	content : "";
+	position : absolute;
+	transform : translateY( -10px ) rotate( 0deg );
+}
+
+div#sp-icon span:after {
+	content : "";
+	position : absolute;
+	transform : translateY( 10px ) rotate( 0deg );
+}
+
+
+div.sp-close span {
+	background : transparent !important;
+}
+
+div.sp-close span:before {
+	transform : rotate( 45deg ) !important;
+}
+
+div.sp-close span:after {
+	transform : rotate( -45deg ) !important;
+}
+
+.category1_t {
+	font-size: 10vw;
+	margin-top: 10px;
+}
+.category2_t {
+	font-size: 10vw;
+	margin-top: 10px;
+}
+.footer_logo {
+		width: 30%;
+		padding-left: 20px;
+		position: relative;
+		top: 30px;
+}
+.sns {
+	margin-top: 12px;
+}
+.contact {
+	margin-bottom: 0;
+}
+.information {
+	position: static;
+	width: 740px;
+	text-align: center;
+	margin: 0 auto;
+}
+.contact_copy {
+	margin: 50px auto 0 auto;
+	font-size: 9vw;
+}
+.contact_info > h2 {
+	float: none;
+}
+.contact_info img {
+	width: 220px;
+}
+dl {
+	margin-left: 0;
+}
+.imgbox {
+	display: none;
+}
+.e-mail {
+	font-size: 48px;
+	margin-top: 70px;
+}
+.telephone {
+	font-size: 48px;
+	margin-top: 40px;
+}
+dd {
+	font-size: 28px;
+}
+.submit_bt span {
+	margin-left: 44px;
+}
+.submit_bt {
+	margin: 40px auto 0;
+	padding: 22px;
+	width: 260px;
+	font-size: 40px;
+	left: 24px;
+	border-radius: 50px;
+}
+.submit_bt:after {
+	width: 50px;
+}
+/*about_iPad*/
+.prof_info {
+	margin-top: -40px;
+}
+/*single_iPad*/
+.title {
+	font-size: 9vw;
+}
+.tag {
+	font-size: 3vw;
+}
+.photo{
+        margin-top:40px;
+}
+.work{
+        width: 80%;
+}
+}
+
+
+
+/*iphone*/
+@media screen and (max-width: 600px) {
+	.mainvisual {
+		background: url(../images/main_visual_sp.png);
+		background-size: cover;
+		height: 250px;
+                padding-bottom: 42%;
+	}
+	#logo {
+		width: 40%;
+		padding: 20px 0 0 20px;
+	}
+	.card {
+		width: 100%;
+	}
+	.cardtype {
+		width: 100%;
+		height: 350px;
+		margin: 15px 5px;
+		border-radius: 5px;
+	}
+	.cardtype img {
+		height: 230px;
+		border-radius: 4px;
+	}
+	.works_title {
+		font-size: 24px;
+	}
+	.works_category {
+		font-size: 16px;
+		top: 40px;
+	}
+	#menu {
+		display: none;
+		padding-left: 0;
+	}
+	#sp-icon {
+		display: block;
+	}
+	.cardtype_info {
+		height: 60px;
+	}
+#sp-menu li {
+	padding-left: 0;
+}
+ul#sp-menu {
+	width: 100%;
+        height: 100%;
+	list-style-type : none;
+	background: #2fbdf0;
+	opacity : 0.9;
+	position : absolute;
+	left : 0px;
+	top : 0px;
+	z-index : 990;
+	display : none;
+}
+.navi {
+    height: 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+ul#sp-menu li {
+	text-align : center;
+}
+
+ul#sp-menu li a {
+	text-decoration : none;
+	display : block;
+	color: #fff;
+	padding-top: 22px;
+	padding-bottom: 22px;
+}
+
+ul#sp-menu li a:hover {
+	background: #2fbdf0;
+	opacity : 0.7;
+}
+div#sp-icon {
+	width : 50px;
+	height : 50px;
+	position : absolute;
+	right : 20px;
+	top : 20px;
+	z-index : 999;
+	background: #2fbdf0;
+	border-radius: 8px;
+}
+
+div#sp-icon:hover {
+	cursor : pointer;
+	opacity : 0.7;
+}
+
+div#sp-icon span,
+div#sp-icon span:before,
+div#sp-icon span:after {
+	display : inline-block;
+	width : 30px;
+	height : 3px;
+	background : #fff;
+	transition-property : transform;
+	transition-duration : 0.3s;
+	border-radius: 20px;
+}
+
+div#sp-icon span {
+	position : absolute;
+	left : 50%;
+	top : 50%;
+	transform : translate( -50%, -50% );
+}
+
+div#sp-icon span:before {
+	content : "";
+	position : absolute;
+	transform : translateY( -10px ) rotate( 0deg );
+}
+
+div#sp-icon span:after {
+	content : "";
+	position : absolute;
+	transform : translateY( 10px ) rotate( 0deg );
+}
+
+
+div.sp-close span {
+	background : transparent !important;
+}
+
+div.sp-close span:before {
+	transform : rotate( 45deg ) !important;
+}
+
+div.sp-close span:after {
+	transform : rotate( -45deg ) !important;
+}
+
+.category1_t {
+	font-size: 12vw;
+	margin-top: 10px;
+}
+.category2_t {
+	font-size: 12vw;
+	margin-top: 10px;
+}
+.footer_logo {
+		width: 30%;
+		padding-left: 20px;
+		position: relative;
+		top: 30px;
+	}
+.footer_navi {
+	display: none;
+}
+.contact {
+	margin-bottom: 0;
+}
+.information {
+	position: static;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+}
+.contact_copy {
+	margin: 50px auto 0 auto;
+	font-size: 10vw;
+}
+.contact_info > h2 {
+	float: none;
+	margin: 40px auto 0;
+}
+.contact_info img {
+	width: 180px;
+}
+dl {
+	margin-left: 0;
+}
+.imgbox {
+	display: none;
+}
+.e-mail {
+	font-size: 32px;
+	margin-top: 70px;
+}
+.telephone {
+	font-size: 32px;
+	margin-top: 40px;
+}
+dd {
+	font-size: 20px;
+}
+.submit_bt {
+	margin: 40px auto 0;
+	padding: 20px;
+	width: 160px;
+	font-size: 24px;
+	left: 10px;
+	border-radius: 50px;
+}
+.submit_bt:after {
+	width: 36px;
+}
+.copy_right {
+        font-size: 0.5em;
+}
+/*about_iphone*/
+.profile {
+	display: flex;
+	flex-wrap: wrap;
+}
+.skill {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.prof_info {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.prof_info > h3 {
+	text-align: left;
+	margin-left: 10px;
+	font-size: 16vw;
+}
+.prof_info > p {
+	text-align: left;
+	margin-left: 10px;
+}
+.prof_info > h4 {
+	text-align: left;
+	margin-left: 10px;
+	font-size: 12vw;
+}
+.prof_info > h5 {
+	text-align: justify;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-feature-settings: "palt";
+	font-size: 4.5vw;
+}
+
+/*single_iphone*/
+.title {
+	font-size: 9vw;
+        margin-top: 50px;
+}
+.photo {
+	margin-top: 28px;
+}
+.photo > p {
+	margin-top: 10px;
+}
+.tag {
+	font-size: 4vw;
+        margin-top: 5px;
+}
+.paging {
+	font-size: 16px;
+	width: 260px;
+}
+.work {
+	width: 80%;
+}
