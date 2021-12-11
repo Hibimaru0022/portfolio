@@ -5,7 +5,7 @@ import Header from '../../components/header';
 import Footer from '../../components/footer';
 import Head from 'next/head';
 
-export default function WorksId({ works }, { title = 'Hibimaru Portfolio', description = 'これはHibimaruのポートフォリオサイトです。', ogImage = 'hibimaru.com/public/img/ogp_img.jpg' }) {
+export default function WorksId({ works }, { title = 'Hibimaru Portfolio', description = 'Hibimaruのポートフォリオサイトです。', ogImage = 'https://hibimaru.com/public/img/ogp_img.jpg' }) {
     return (
         <div className={styles.wrap}>
             <Head>

@@ -7,7 +7,7 @@ import Footer from '../components/footer';
 import emailjs from 'emailjs-com';
 import Head from 'next/head';
 
-const Contact = ({ title = 'Hibimaru Portfolio', description = 'これはHibimaruのポートフォリオサイトです。', ogImage = 'hibimaru.com/public/img/ogp_img.jpg' }) => {
+const Contact = ({ title = 'Hibimaru Portfolio', description = 'Hibimaruのポートフォリオサイトです。', ogImage = 'https://hibimaru.com/public/img/ogp_img.jpg' }) => {
     const formRef = useRef();
     const [done, setDone] = useState(false);
 

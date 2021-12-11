@@ -16,7 +16,7 @@ SwiperCore.use([Autoplay]);
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
-export default function Home({ works }, { title = 'Hibimaru Portfolio', description = 'これはHibimaruのポートフォリオサイトです。', ogImage = 'https://hibimaru.com/img/ogp_img.jpg' }) {
+export default function Home({ works }, { title = 'Hibimaru Portfolio', description = 'Hibimaruのポートフォリオサイトです。', ogImage = 'https://hibimaru.com/img/ogp_img.jpg' }) {
     return (
         <>
             <Head>

@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-const About = ({ title = 'Hibimaru Portfolio', description = 'これはHibimaruのポートフォリオサイトです。', ogImage = 'https://hibimaru.com/img/ogp_img.jpg' }) => {
+const About = ({ title = 'Hibimaru Portfolio', description = 'Hibimaruのポートフォリオサイトです。', ogImage = 'https://hibimaru.com/img/ogp_img.jpg' }) => {
     return (
         <>
             <Head>
