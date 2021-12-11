@@ -32,7 +32,9 @@ const Contact = ({ title = 'Hibimaru Portfolio', description = 'Hibimaruのポ�
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={ogImage} />
+                <meta name="twitter:site" content="@Hibimaru02" />
                 <meta name="twitter:card" content="summary" />
+                <meta property="og:url" content="https://hibimaru.com" />
             </Head>
             <Header />
             <section className={styles.contact}>
