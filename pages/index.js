@@ -86,30 +86,6 @@ export default function Home({ works }, { title = 'Hibimaru Portfolio', descript
                             </Link>
                         </button>
                     </section>
-                    {/* <section className={styles.minimals} id="minimals">
-                    <Title title={'Minimals'} />
-                    <ul className={`${styles.minimals__list} ${styles.slider}`}>
-                        {minimals.map((minimals) => (
-                            <li key={minimals.id} className={styles.minimals__col}>
-                                <Link href={`/minimals${minimals.id}`}>
-                                    <a>
-                                        <figure className={styles.minimals__col__thumbnail}>
-                                            <img src={minimals.img.url} alt={minimals.title} />
-                                        </figure>
-                                        <div className={styles.minimals__col__info}>
-                                            <h4 className={styles.minimals__col__ttl}>{minimals.title}</h4>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                    <button className={styles.more}>
-                        <Link href="/minimals_list">
-                            <a>More</a>
-                        </Link>
-                    </button>
-                </section> */}
                 </div>
                 <About />
                 <TopContact />
